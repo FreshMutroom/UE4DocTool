@@ -1,0 +1,1778 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+		<title>SShooterScoreboardWidget | Shooter Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch">
+							<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+							<input type="text" name="keyword" class="searchbox" autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="contentContainer" class style="margin-left: 0px;">
+				<div id="pagedefault">
+					<div id="pagecontainer" style="padding-right: 0px; min-height: 49px;">
+						<div class="hero">
+							<div class="info">
+								<div id="pageTitle">
+									<h1 id="H1TitleId">SShooterScoreboardWidget</h1>
+								</div>
+									<h2>class declare</h2>
+								</div>
+							</div>
+							<div id="maincol" style="width: calc(100% - 60px); padding-bottom: 100px; height: auto;">
+								<div class="heading expanded">
+									<p>Inheritance Hierarchy</p>
+								</div>
+								<div id="hierarchy">
+									<div class="hierarchy">
+										<table class="hierarchy-table" cellspacing="0" id="hrch">
+											<tbody>
+												<tr>
+													<td class="hierarchy-button-cell">
+														<p>
+															<img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+														</p>
+													</td>
+													<td class='hierarchy-label-cell'>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>References</p>
+							</div>
+							<div id="references">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Module</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														ShooterGame
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Header</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														/ShooterGame/Source/ShooterGame/Private/UI/Widgets/SShooterScoreboardWidget.h
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Include</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														#include "UI/Widgets/SShooterScoreboardWidget.h"
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Syntax</p>
+							</div>
+							<div id="syntax">
+								<div class="simplecode_api">
+									<p>
+										class SShooterScoreboardWidget : 
+public 
+SBorder<br>
+									</p>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Remarks</p>
+							</div>
+							<div id="description" style>
+								<p>
+									class declare
+								</p>
+							</div>
+							<div class="syntax">
+							<div class="heading expanded">
+								<p>Variables</p>
+							</div>
+								<div id="variables">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+													<th class="icon-cell" style="width:8%">
+													</th>
+													<th class="type-cell" style="width:10%">
+													</th>
+													<th class="name-cell" style="width:15%">
+														Name
+													</th>
+													<th class="desc-cell">
+														Description
+													</th>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; FColumnData &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>Columns</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															stat columns data
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; int32 &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>LastTeamPlayerCount</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															player count in each team in the last tick
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>Type</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>MatchState</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															get state of current match
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TWeakObjectPtr</span> &lt; APlayerController &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>PCOwner</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															pointer to our parent HUD
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; TPair &lt; TSharedRef &lt; const, FUniqueNetId &gt;, bool &gt; &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>PlayersTalkingThisFrame</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															holds talking player data
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; RankedPlayerMap &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>PlayerStateMaps</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															the Ranked PlayerState map...cleared every frame
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TSharedPtr</span> &lt; SVerticalBox &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreboardData</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															holds player info rows
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>double</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreboardStartTime</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															when the scoreboard was brought up.
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																const 
+<span>FShooterScoreboardStyle</span> 
+*															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreboardStyle</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															style for the scoreboard
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>FLinearColor</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreboardTint</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															scoreboard tint color
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreBoxWidth</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															width of scoreboard item
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>float</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>ScoreCountUpTime</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															scoreboard count up time
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>FTeamPlayer</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>SelectedPlayer</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															the player currently selected in the scoreboard
+														</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+									<div class="heading expanded">
+										<p>Constructors</p>
+									</div>
+									<div id="constructor">
+										<div class="member-list">
+											<table cellspacing='0'>
+												<tbody>
+													<tr class='header-row'>
+														<th class="icon-cell" style="width:10%">
+														</th>
+														<th class="name-cell" style="width:15%">
+															Name
+														</th>
+														<th class='desc-cell'>
+															Description
+														</th>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+														</p>
+													</td>
+													<td class="name-cell">
+														<nobr>
+															<p>SLATE_BEGIN_ARGS()</p>
+														</nobr>
+														<div class="name-cell-arguments">
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+												</p>
+											</td>
+											<td class="name-cell">
+												<nobr>
+													<p>Construct</p>
+												</nobr>
+												<div class="name-cell-arguments">
+													<p>
+														(
+															<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;
+const FArguments & InArgs,															<br>);<br>
+														</p>
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Functions</p>
+							</div>
+							<div id="functions_0">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="header-row">
+											<th class="icon-cell" style="width:10%">
+											</th>
+											<th class="name-cell" style="width:8%;">
+											</th>
+											<th class="name-cell" style="width:15%;">
+												Name
+											</th>
+											<th class="desc-cell">
+												Description
+											</th>
+										</tr>
+										<tr class="normal-row">
+											<td class="icon-cell">
+												<p>
+													<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+												</p>
+											</td>
+											<td class="name-cell" align="right">
+												<span class="type-span">
+													<p>
+														void													</p>
+												</span>
+											</td>
+											<td class="name-cell">
+												<a class="docTool_ClassFunctionListLink">
+													<nobr>
+														<p>Tick</p>
+													</nobr>
+												</a>
+												<div class="name-cell-arguments">
+													<p>
+														(
+															<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;
+const FGeometry & AllottedGeometry,<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;
+const double InCurrentTime,<br>
+																		&nbsp;&nbsp;&nbsp;&nbsp;
+const float InDeltaTime																	<br>)<br>
+																</p>
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																update PlayerState maps with every tick when scoreboard is shown
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																	<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		bool																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink">
+																	<nobr>
+																		<p>SupportsKeyboardFocus()</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																if we want to receive focus
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+															</p>
+														</td>
+														<td class="name-cell" align="right">
+															<span class="type-span">
+																<p>
+																	FReply																</p>
+															</span>
+														</td>
+														<td class="name-cell">
+															<a class="docTool_ClassFunctionListLink">
+																<nobr>
+																	<p>OnFocusReceived</p>
+																</nobr>
+															</a>
+															<div class="name-cell-arguments">
+																<p>
+																	(
+																		<br>
+																			&nbsp;&nbsp;&nbsp;&nbsp;
+const FGeometry & MyGeometry,<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;
+const FFocusEvent & InFocusEvent																			<br>)<br>
+																		</p>
+																	</div>
+																</td>
+																<td class="desc-cell">
+																	<p>
+																		when the widget recieves keyboard focus
+																	</p>
+																</td>
+															</tr>
+															<tr class="normal-row">
+																<td class="icon-cell">
+																	<p>
+																		<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																	</p>
+																</td>
+																<td class="name-cell" align="right">
+																	<span class="type-span">
+																		<p>
+																			FReply																		</p>
+																	</span>
+																</td>
+																<td class="name-cell">
+																	<a class="docTool_ClassFunctionListLink">
+																		<nobr>
+																			<p>OnKeyDown</p>
+																		</nobr>
+																	</a>
+																	<div class="name-cell-arguments">
+																		<p>
+																			(
+																				<br>
+																					&nbsp;&nbsp;&nbsp;&nbsp;
+const FGeometry & MyGeometry,<br>
+																						&nbsp;&nbsp;&nbsp;&nbsp;
+const FKeyEvent & InKeyEvent																					<br>)<br>
+																				</p>
+																			</div>
+																		</td>
+																		<td class="desc-cell">
+																			<p>
+																				handle keyboard input
+																			</p>
+																		</td>
+																	</tr>
+																	<tr class="normal-row">
+																		<td class="icon-cell">
+																			<p>
+																		</p>
+																	</td>
+																	<td class="name-cell" align="right">
+																		<span class="type-span">
+																			<p>
+																				void																			</p>
+																		</span>
+																	</td>
+																	<td class="name-cell">
+																		<a class="docTool_ClassFunctionListLink">
+																			<nobr>
+																				<p>StoreTalkingPlayerData</p>
+																			</nobr>
+																		</a>
+																		<div class="name-cell-arguments">
+																			<p>
+																				(
+																					<br>
+																						&nbsp;&nbsp;&nbsp;&nbsp;
+const FUniqueNetId & PlayerId,<br>
+																							&nbsp;&nbsp;&nbsp;&nbsp;
+bool bIsTalking																						<br>)<br>
+																					</p>
+																				</div>
+																			</td>
+																			<td class="desc-cell">
+																				<p>
+																					Called when the scoreboard is displayed, Stores the name and whether or not a player is currently talking
+																				</p>
+																			</td>
+																		</tr>
+																		<tr class="normal-row">
+																			<td class="icon-cell">
+																				<p>
+																					<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																				</p>
+																			</td>
+																			<td class="name-cell" align="right">
+																				<span class="type-span">
+																					<p>
+																						void																					</p>
+																				</span>
+																			</td>
+																			<td class="name-cell">
+																				<a class="docTool_ClassFunctionListLink">
+																					<nobr>
+																						<p>UpdateScoreboardGrid()</p>
+																					</nobr>
+																				</a>
+																				<div class="name-cell-arguments">
+																			</div>
+																		</td>
+																		<td class="desc-cell">
+																			<p>
+																				updates widgets when players leave or join
+																			</p>
+																		</td>
+																	</tr>
+																	<tr class="normal-row">
+																		<td class="icon-cell">
+																			<p>
+																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																				</p>
+																			</td>
+																			<td class="name-cell" align="right">
+																				<span class="type-span">
+																					<p>
+																						TSharedRef &lt; SWidget &gt;																					</p>
+																				</span>
+																			</td>
+																			<td class="name-cell">
+																				<a class="docTool_ClassFunctionListLink">
+																					<nobr>
+																						<p>MakeTotalsRow</p>
+																					</nobr>
+																				</a>
+																				<div class="name-cell-arguments">
+																					<p>
+																						(
+																							<br>
+																								&nbsp;&nbsp;&nbsp;&nbsp;
+uint8 TeamNum																							<br>)<br>
+																						</p>
+																					</div>
+																				</td>
+																				<td class="desc-cell">
+																					<p>
+																						makes total row widget
+																					</p>
+																				</td>
+																			</tr>
+																			<tr class="normal-row">
+																				<td class="icon-cell">
+																					<p>
+																						<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																							<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																						</p>
+																					</td>
+																					<td class="name-cell" align="right">
+																						<span class="type-span">
+																							<p>
+																								TSharedRef &lt; SWidget &gt;																							</p>
+																						</span>
+																					</td>
+																					<td class="name-cell">
+																						<a class="docTool_ClassFunctionListLink">
+																							<nobr>
+																								<p>MakePlayerRows</p>
+																							</nobr>
+																						</a>
+																						<div class="name-cell-arguments">
+																							<p>
+																								(
+																									<br>
+																										&nbsp;&nbsp;&nbsp;&nbsp;
+uint8 TeamNum																									<br>)<br>
+																								</p>
+																							</div>
+																						</td>
+																						<td class="desc-cell">
+																							<p>
+																								makes player rows
+																							</p>
+																						</td>
+																					</tr>
+																					<tr class="normal-row">
+																						<td class="icon-cell">
+																							<p>
+																								<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																									<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																								</p>
+																							</td>
+																							<td class="name-cell" align="right">
+																								<span class="type-span">
+																									<p>
+																										TSharedRef &lt; SWidget &gt;																									</p>
+																								</span>
+																							</td>
+																							<td class="name-cell">
+																								<a class="docTool_ClassFunctionListLink">
+																									<nobr>
+																										<p>MakePlayerRow</p>
+																									</nobr>
+																								</a>
+																								<div class="name-cell-arguments">
+																									<p>
+																										(
+																											<br>
+																												&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer & TeamPlayer																											<br>)<br>
+																										</p>
+																									</div>
+																								</td>
+																								<td class="desc-cell">
+																									<p>
+																										makes player row
+																									</p>
+																								</td>
+																							</tr>
+																							<tr class="normal-row">
+																								<td class="icon-cell">
+																									<p>
+																										<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																									</p>
+																								</td>
+																								<td class="name-cell" align="right">
+																									<span class="type-span">
+																										<p>
+																											void																										</p>
+																									</span>
+																								</td>
+																								<td class="name-cell">
+																									<a class="docTool_ClassFunctionListLink">
+																										<nobr>
+																											<p>UpdatePlayerStateMaps()</p>
+																										</nobr>
+																									</a>
+																									<div class="name-cell-arguments">
+																								</div>
+																							</td>
+																							<td class="desc-cell">
+																								<p>
+																									updates PlayerState maps to display accurate scores
+																								</p>
+																							</td>
+																						</tr>
+																						<tr class="normal-row">
+																							<td class="icon-cell">
+																								<p>
+																									<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																										<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																									</p>
+																								</td>
+																								<td class="name-cell" align="right">
+																									<span class="type-span">
+																										<p>
+																											void																										</p>
+																									</span>
+																								</td>
+																								<td class="name-cell">
+																									<a class="docTool_ClassFunctionListLink">
+																										<nobr>
+																											<p>GetRankedMap</p>
+																										</nobr>
+																									</a>
+																									<div class="name-cell-arguments">
+																										<p>
+																											(
+																												<br>
+																													&nbsp;&nbsp;&nbsp;&nbsp;
+int32 TeamIndex,<br>
+																														&nbsp;&nbsp;&nbsp;&nbsp;
+RankedPlayerMap & OutRankedMap																													<br>)<br>
+																												</p>
+																											</div>
+																										</td>
+																										<td class="desc-cell">
+																											<p>
+																												gets ranked map for specific team
+																											</p>
+																										</td>
+																									</tr>
+																									<tr class="normal-row">
+																										<td class="icon-cell">
+																											<p>
+																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																													<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																												</p>
+																											</td>
+																											<td class="name-cell" align="right">
+																												<span class="type-span">
+																													<p>
+																														AShooterPlayerState 
+*																													</p>
+																												</span>
+																											</td>
+																											<td class="name-cell">
+																												<a class="docTool_ClassFunctionListLink">
+																													<nobr>
+																														<p>GetSortedPlayerState</p>
+																													</nobr>
+																												</a>
+																												<div class="name-cell-arguments">
+																													<p>
+																														(
+																															<br>
+																																&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer & TeamPlayer																															<br>)<br>
+																														</p>
+																													</div>
+																												</td>
+																												<td class="desc-cell">
+																													<p>
+																														gets PlayerState for specific team and player
+																													</p>
+																												</td>
+																											</tr>
+																											<tr class="normal-row">
+																												<td class="icon-cell">
+																													<p>
+																														<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																															<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																														</p>
+																													</td>
+																													<td class="name-cell" align="right">
+																														<span class="type-span">
+																															<p>
+																																EVisibility																															</p>
+																														</span>
+																													</td>
+																													<td class="name-cell">
+																														<a class="docTool_ClassFunctionListLink">
+																															<nobr>
+																																<p>PlayerPresenceToItemVisibility</p>
+																															</nobr>
+																														</a>
+																														<div class="name-cell-arguments">
+																															<p>
+																																(
+																																	<br>
+																																		&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																	<br>)<br>
+																																</p>
+																															</div>
+																														</td>
+																														<td class="desc-cell">
+																															<p>
+																																get player visibility
+																															</p>
+																														</td>
+																													</tr>
+																													<tr class="normal-row">
+																														<td class="icon-cell">
+																															<p>
+																																<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																	<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																</p>
+																															</td>
+																															<td class="name-cell" align="right">
+																																<span class="type-span">
+																																	<p>
+																																		EVisibility																																	</p>
+																																</span>
+																															</td>
+																															<td class="name-cell">
+																																<a class="docTool_ClassFunctionListLink">
+																																	<nobr>
+																																		<p>SpeakerIconVisibility</p>
+																																	</nobr>
+																																</a>
+																																<div class="name-cell-arguments">
+																																	<p>
+																																		(
+																																			<br>
+																																				&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																			<br>)<br>
+																																		</p>
+																																	</div>
+																																</td>
+																																<td class="desc-cell">
+																																	<p>
+																																		get speaker icon visibility
+																																	</p>
+																																</td>
+																															</tr>
+																															<tr class="normal-row">
+																																<td class="icon-cell">
+																																	<p>
+																																		<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																			<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																		</p>
+																																	</td>
+																																	<td class="name-cell" align="right">
+																																		<span class="type-span">
+																																			<p>
+																																				FSlateColor																																			</p>
+																																		</span>
+																																	</td>
+																																	<td class="name-cell">
+																																		<a class="docTool_ClassFunctionListLink">
+																																			<nobr>
+																																				<p>GetScoreboardBorderColor</p>
+																																			</nobr>
+																																		</a>
+																																		<div class="name-cell-arguments">
+																																			<p>
+																																				(
+																																					<br>
+																																						&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																					<br>)<br>
+																																				</p>
+																																			</div>
+																																		</td>
+																																		<td class="desc-cell">
+																																			<p>
+																																				get scoreboard border color
+																																			</p>
+																																		</td>
+																																	</tr>
+																																	<tr class="normal-row">
+																																		<td class="icon-cell">
+																																			<p>
+																																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																				</p>
+																																			</td>
+																																			<td class="name-cell" align="right">
+																																				<span class="type-span">
+																																					<p>
+																																						FText																																					</p>
+																																				</span>
+																																			</td>
+																																			<td class="name-cell">
+																																				<a class="docTool_ClassFunctionListLink">
+																																					<nobr>
+																																						<p>GetPlayerName</p>
+																																					</nobr>
+																																				</a>
+																																				<div class="name-cell-arguments">
+																																					<p>
+																																						(
+																																							<br>
+																																								&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																							<br>)<br>
+																																						</p>
+																																					</div>
+																																				</td>
+																																				<td class="desc-cell">
+																																					<p>
+																																						get player name
+																																					</p>
+																																				</td>
+																																			</tr>
+																																			<tr class="normal-row">
+																																				<td class="icon-cell">
+																																					<p>
+																																						<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																							<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																						</p>
+																																					</td>
+																																					<td class="name-cell" align="right">
+																																						<span class="type-span">
+																																							<p>
+																																								bool																																							</p>
+																																						</span>
+																																					</td>
+																																					<td class="name-cell">
+																																						<a class="docTool_ClassFunctionListLink">
+																																							<nobr>
+																																								<p>ShouldPlayerBeDisplayed</p>
+																																							</nobr>
+																																						</a>
+																																						<div class="name-cell-arguments">
+																																							<p>
+																																								(
+																																									<br>
+																																										&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																									<br>)<br>
+																																								</p>
+																																							</div>
+																																						</td>
+																																						<td class="desc-cell">
+																																							<p>
+																																								get whether or not the player should be displayed on the scoreboard
+																																							</p>
+																																						</td>
+																																					</tr>
+																																					<tr class="normal-row">
+																																						<td class="icon-cell">
+																																							<p>
+																																								<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																									<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																								</p>
+																																							</td>
+																																							<td class="name-cell" align="right">
+																																								<span class="type-span">
+																																									<p>
+																																										FSlateColor																																									</p>
+																																								</span>
+																																							</td>
+																																							<td class="name-cell">
+																																								<a class="docTool_ClassFunctionListLink">
+																																									<nobr>
+																																										<p>GetPlayerColor</p>
+																																									</nobr>
+																																								</a>
+																																								<div class="name-cell-arguments">
+																																									<p>
+																																										(
+																																											<br>
+																																												&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																											<br>)<br>
+																																										</p>
+																																									</div>
+																																								</td>
+																																								<td class="desc-cell">
+																																									<p>
+																																										get player color
+																																									</p>
+																																								</td>
+																																							</tr>
+																																							<tr class="normal-row">
+																																								<td class="icon-cell">
+																																									<p>
+																																										<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																											<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																										</p>
+																																									</td>
+																																									<td class="name-cell" align="right">
+																																										<span class="type-span">
+																																											<p>
+																																												FSlateColor																																											</p>
+																																										</span>
+																																									</td>
+																																									<td class="name-cell">
+																																										<a class="docTool_ClassFunctionListLink">
+																																											<nobr>
+																																												<p>GetColumnColor</p>
+																																											</nobr>
+																																										</a>
+																																										<div class="name-cell-arguments">
+																																											<p>
+																																												(
+																																													<br>
+																																														&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer,<br>
+																																															&nbsp;&nbsp;&nbsp;&nbsp;
+uint8 ColIdx																																														<br>)<br>
+																																													</p>
+																																												</div>
+																																											</td>
+																																											<td class="desc-cell">
+																																												<p>
+																																													get the column color
+																																												</p>
+																																											</td>
+																																										</tr>
+																																										<tr class="normal-row">
+																																											<td class="icon-cell">
+																																												<p>
+																																													<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																														<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																													</p>
+																																												</td>
+																																												<td class="name-cell" align="right">
+																																													<span class="type-span">
+																																														<p>
+																																															bool																																														</p>
+																																													</span>
+																																												</td>
+																																												<td class="name-cell">
+																																													<a class="docTool_ClassFunctionListLink">
+																																														<nobr>
+																																															<p>IsOwnerPlayer</p>
+																																														</nobr>
+																																													</a>
+																																													<div class="name-cell-arguments">
+																																														<p>
+																																															(
+																																																<br>
+																																																	&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer & TeamPlayer																																																<br>)<br>
+																																															</p>
+																																														</div>
+																																													</td>
+																																													<td class="desc-cell">
+																																														<p>
+																																															checks to see if the specified player is the owner
+																																														</p>
+																																													</td>
+																																												</tr>
+																																												<tr class="normal-row">
+																																													<td class="icon-cell">
+																																														<p>
+																																															<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																															</p>
+																																														</td>
+																																														<td class="name-cell" align="right">
+																																															<span class="type-span">
+																																																<p>
+																																																	FText																																																</p>
+																																															</span>
+																																														</td>
+																																														<td class="name-cell">
+																																															<a class="docTool_ClassFunctionListLink">
+																																																<nobr>
+																																																	<p>GetStat</p>
+																																																</nobr>
+																																															</a>
+																																															<div class="name-cell-arguments">
+																																																<p>
+																																																	(
+																																																		<br>
+																																																			&nbsp;&nbsp;&nbsp;&nbsp;
+FOnGetPlayerStateAttribute Getter,<br>
+																																																				&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																																			<br>)<br>
+																																																		</p>
+																																																	</div>
+																																																</td>
+																																																<td class="desc-cell">
+																																																	<p>
+																																																		get specific stat for team number and optionally player
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr class="normal-row">
+																																																<td class="icon-cell">
+																																																	<p>
+																																																		<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																			<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																		</p>
+																																																	</td>
+																																																	<td class="name-cell" align="right">
+																																																		<span class="type-span">
+																																																			<p>
+																																																				int32																																																			</p>
+																																																		</span>
+																																																	</td>
+																																																	<td class="name-cell">
+																																																		<a class="docTool_ClassFunctionListLink">
+																																																			<nobr>
+																																																				<p>LerpForCountup</p>
+																																																			</nobr>
+																																																		</a>
+																																																		<div class="name-cell-arguments">
+																																																			<p>
+																																																				(
+																																																					<br>
+																																																						&nbsp;&nbsp;&nbsp;&nbsp;
+int32 ScoreValue																																																					<br>)<br>
+																																																				</p>
+																																																			</div>
+																																																		</td>
+																																																		<td class="desc-cell">
+																																																			<p>
+																																																				linear interpolated score for match outcome animation
+																																																			</p>
+																																																		</td>
+																																																	</tr>
+																																																	<tr class="normal-row">
+																																																		<td class="icon-cell">
+																																																			<p>
+																																																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																				</p>
+																																																			</td>
+																																																			<td class="name-cell" align="right">
+																																																				<span class="type-span">
+																																																					<p>
+																																																						FText																																																					</p>
+																																																				</span>
+																																																			</td>
+																																																			<td class="name-cell">
+																																																				<a class="docTool_ClassFunctionListLink">
+																																																					<nobr>
+																																																						<p>GetMatchOutcomeText()</p>
+																																																					</nobr>
+																																																				</a>
+																																																				<div class="name-cell-arguments">
+																																																			</div>
+																																																		</td>
+																																																		<td class="desc-cell">
+																																																			<p>
+																																																				get match outcome text
+																																																			</p>
+																																																		</td>
+																																																	</tr>
+																																																	<tr class="normal-row">
+																																																		<td class="icon-cell">
+																																																			<p>
+																																																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																				</p>
+																																																			</td>
+																																																			<td class="name-cell" align="right">
+																																																				<span class="type-span">
+																																																					<p>
+																																																						FText																																																					</p>
+																																																				</span>
+																																																			</td>
+																																																			<td class="name-cell">
+																																																				<a class="docTool_ClassFunctionListLink">
+																																																					<nobr>
+																																																						<p>GetMatchRestartText()</p>
+																																																					</nobr>
+																																																				</a>
+																																																				<div class="name-cell-arguments">
+																																																			</div>
+																																																		</td>
+																																																		<td class="desc-cell">
+																																																			<p>
+																																																				Get text for match-restart notification.
+																																																			</p>
+																																																		</td>
+																																																	</tr>
+																																																	<tr class="normal-row">
+																																																		<td class="icon-cell">
+																																																			<p>
+																																																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																				</p>
+																																																			</td>
+																																																			<td class="name-cell" align="right">
+																																																				<span class="type-span">
+																																																					<p>
+																																																						int32																																																					</p>
+																																																				</span>
+																																																			</td>
+																																																			<td class="name-cell">
+																																																				<a class="docTool_ClassFunctionListLink">
+																																																					<nobr>
+																																																						<p>GetAttributeValue_Kills</p>
+																																																					</nobr>
+																																																				</a>
+																																																				<div class="name-cell-arguments">
+																																																					<p>
+																																																						(
+																																																							<br>
+																																																								&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * PlayerState																																																							<br>)<br>
+																																																						</p>
+																																																					</div>
+																																																				</td>
+																																																				<td class="desc-cell">
+																																																					<p>
+																																																						get attribute value for kills
+																																																					</p>
+																																																				</td>
+																																																			</tr>
+																																																			<tr class="normal-row">
+																																																				<td class="icon-cell">
+																																																					<p>
+																																																						<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																							<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																						</p>
+																																																					</td>
+																																																					<td class="name-cell" align="right">
+																																																						<span class="type-span">
+																																																							<p>
+																																																								int32																																																							</p>
+																																																						</span>
+																																																					</td>
+																																																					<td class="name-cell">
+																																																						<a class="docTool_ClassFunctionListLink">
+																																																							<nobr>
+																																																								<p>GetAttributeValue_Deaths</p>
+																																																							</nobr>
+																																																						</a>
+																																																						<div class="name-cell-arguments">
+																																																							<p>
+																																																								(
+																																																									<br>
+																																																										&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * PlayerState																																																									<br>)<br>
+																																																								</p>
+																																																							</div>
+																																																						</td>
+																																																						<td class="desc-cell">
+																																																							<p>
+																																																								get attribute value for deaths
+																																																							</p>
+																																																						</td>
+																																																					</tr>
+																																																					<tr class="normal-row">
+																																																						<td class="icon-cell">
+																																																							<p>
+																																																								<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																									<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																								</p>
+																																																							</td>
+																																																							<td class="name-cell" align="right">
+																																																								<span class="type-span">
+																																																									<p>
+																																																										int32																																																									</p>
+																																																								</span>
+																																																							</td>
+																																																							<td class="name-cell">
+																																																								<a class="docTool_ClassFunctionListLink">
+																																																									<nobr>
+																																																										<p>GetAttributeValue_Score</p>
+																																																									</nobr>
+																																																								</a>
+																																																								<div class="name-cell-arguments">
+																																																									<p>
+																																																										(
+																																																											<br>
+																																																												&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * PlayerState																																																											<br>)<br>
+																																																										</p>
+																																																									</div>
+																																																								</td>
+																																																								<td class="desc-cell">
+																																																									<p>
+																																																										get attribute value for score
+																																																									</p>
+																																																								</td>
+																																																							</tr>
+																																																							<tr class="normal-row">
+																																																								<td class="icon-cell">
+																																																									<p>
+																																																										<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																											<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																										</p>
+																																																									</td>
+																																																									<td class="name-cell" align="right">
+																																																										<span class="type-span">
+																																																											<p>
+																																																												void																																																											</p>
+																																																										</span>
+																																																									</td>
+																																																									<td class="name-cell">
+																																																										<a class="docTool_ClassFunctionListLink">
+																																																											<nobr>
+																																																												<p>PlaySound</p>
+																																																											</nobr>
+																																																										</a>
+																																																										<div class="name-cell-arguments">
+																																																											<p>
+																																																												(
+																																																													<br>
+																																																														&nbsp;&nbsp;&nbsp;&nbsp;
+const FSlateSound & SoundToPlay																																																													<br>)<br>
+																																																												</p>
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												triggers a sound effect to play
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																											</p>
+																																																										</td>
+																																																										<td class="name-cell" align="right">
+																																																											<span class="type-span">
+																																																												<p>
+																																																													FReply																																																												</p>
+																																																											</span>
+																																																										</td>
+																																																										<td class="name-cell">
+																																																											<a class="docTool_ClassFunctionListLink">
+																																																												<nobr>
+																																																													<p>OnMouseOverPlayer</p>
+																																																												</nobr>
+																																																											</a>
+																																																											<div class="name-cell-arguments">
+																																																												<p>
+																																																													(
+																																																														<br>
+																																																															&nbsp;&nbsp;&nbsp;&nbsp;
+const FGeometry & Geometry,<br>
+																																																																&nbsp;&nbsp;&nbsp;&nbsp;
+const FPointerEvent & Event,<br>
+																																																																	&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer TeamPlayer																																																																<br>)<br>
+																																																															</p>
+																																																														</div>
+																																																													</td>
+																																																													<td class="desc-cell">
+																																																														<p>
+																																																															handle the mouse moving over scoreboard entry
+																																																														</p>
+																																																													</td>
+																																																												</tr>
+																																																												<tr class="normal-row">
+																																																													<td class="icon-cell">
+																																																														<p>
+																																																															<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																														</p>
+																																																													</td>
+																																																													<td class="name-cell" align="right">
+																																																														<span class="type-span">
+																																																															<p>
+																																																																void																																																															</p>
+																																																														</span>
+																																																													</td>
+																																																													<td class="name-cell">
+																																																														<a class="docTool_ClassFunctionListLink">
+																																																															<nobr>
+																																																																<p>OnSelectedPlayerPrev()</p>
+																																																															</nobr>
+																																																														</a>
+																																																														<div class="name-cell-arguments">
+																																																													</div>
+																																																												</td>
+																																																												<td class="desc-cell">
+																																																													<p>
+																																																														called when the previous player wants to be selected
+																																																													</p>
+																																																												</td>
+																																																											</tr>
+																																																											<tr class="normal-row">
+																																																												<td class="icon-cell">
+																																																													<p>
+																																																														<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																													</p>
+																																																												</td>
+																																																												<td class="name-cell" align="right">
+																																																													<span class="type-span">
+																																																														<p>
+																																																															void																																																														</p>
+																																																													</span>
+																																																												</td>
+																																																												<td class="name-cell">
+																																																													<a class="docTool_ClassFunctionListLink">
+																																																														<nobr>
+																																																															<p>OnSelectedPlayerNext()</p>
+																																																														</nobr>
+																																																													</a>
+																																																													<div class="name-cell-arguments">
+																																																												</div>
+																																																											</td>
+																																																											<td class="desc-cell">
+																																																												<p>
+																																																													called when the next player wants to be selected
+																																																												</p>
+																																																											</td>
+																																																										</tr>
+																																																										<tr class="normal-row">
+																																																											<td class="icon-cell">
+																																																												<p>
+																																																													<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																												</p>
+																																																											</td>
+																																																											<td class="name-cell" align="right">
+																																																												<span class="type-span">
+																																																													<p>
+																																																														void																																																													</p>
+																																																												</span>
+																																																											</td>
+																																																											<td class="name-cell">
+																																																												<a class="docTool_ClassFunctionListLink">
+																																																													<nobr>
+																																																														<p>ResetSelectedPlayer()</p>
+																																																													</nobr>
+																																																												</a>
+																																																												<div class="name-cell-arguments">
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												resets the selected player to be that of the local user
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																											</p>
+																																																										</td>
+																																																										<td class="name-cell" align="right">
+																																																											<span class="type-span">
+																																																												<p>
+																																																													void																																																												</p>
+																																																											</span>
+																																																										</td>
+																																																										<td class="name-cell">
+																																																											<a class="docTool_ClassFunctionListLink">
+																																																												<nobr>
+																																																													<p>UpdateSelectedPlayer()</p>
+																																																												</nobr>
+																																																											</a>
+																																																											<div class="name-cell-arguments">
+																																																										</div>
+																																																									</td>
+																																																									<td class="desc-cell">
+																																																										<p>
+																																																											makes sure the selected player is valid
+																																																										</p>
+																																																									</td>
+																																																								</tr>
+																																																								<tr class="normal-row">
+																																																									<td class="icon-cell">
+																																																										<p>
+																																																											<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																										</p>
+																																																									</td>
+																																																									<td class="name-cell" align="right">
+																																																										<span class="type-span">
+																																																											<p>
+																																																												bool																																																											</p>
+																																																										</span>
+																																																									</td>
+																																																									<td class="name-cell">
+																																																										<a class="docTool_ClassFunctionListLink">
+																																																											<nobr>
+																																																												<p>SetSelectedPlayerUs()</p>
+																																																											</nobr>
+																																																										</a>
+																																																										<div class="name-cell-arguments">
+																																																									</div>
+																																																								</td>
+																																																								<td class="desc-cell">
+																																																									<p>
+																																																										sets the currently selected player to be ourselves
+																																																									</p>
+																																																								</td>
+																																																							</tr>
+																																																							<tr class="normal-row">
+																																																								<td class="icon-cell">
+																																																									<p>
+																																																										<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																											<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																										</p>
+																																																									</td>
+																																																									<td class="name-cell" align="right">
+																																																										<span class="type-span">
+																																																											<p>
+																																																												bool																																																											</p>
+																																																										</span>
+																																																									</td>
+																																																									<td class="name-cell">
+																																																										<a class="docTool_ClassFunctionListLink">
+																																																											<nobr>
+																																																												<p>IsSelectedPlayer</p>
+																																																											</nobr>
+																																																										</a>
+																																																										<div class="name-cell-arguments">
+																																																											<p>
+																																																												(
+																																																													<br>
+																																																														&nbsp;&nbsp;&nbsp;&nbsp;
+const FTeamPlayer & TeamPlayer																																																													<br>)<br>
+																																																												</p>
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												checks to see if the specified player is the selected one
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																													<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																												</p>
+																																																											</td>
+																																																											<td class="name-cell" align="right">
+																																																												<span class="type-span">
+																																																													<p>
+																																																														bool																																																													</p>
+																																																												</span>
+																																																											</td>
+																																																											<td class="name-cell">
+																																																												<a class="docTool_ClassFunctionListLink">
+																																																													<nobr>
+																																																														<p>IsPlayerSelectedAndValid()</p>
+																																																													</nobr>
+																																																												</a>
+																																																												<div class="name-cell-arguments">
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												is there a valid selected item
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																													<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																												</p>
+																																																											</td>
+																																																											<td class="name-cell" align="right">
+																																																												<span class="type-span">
+																																																													<p>
+																																																														EVisibility																																																													</p>
+																																																												</span>
+																																																											</td>
+																																																											<td class="name-cell">
+																																																												<a class="docTool_ClassFunctionListLink">
+																																																													<nobr>
+																																																														<p>GetProfileUIVisibility()</p>
+																																																													</nobr>
+																																																												</a>
+																																																												<div class="name-cell-arguments">
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												check to see if we can open the profile ui
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																													<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																												</p>
+																																																											</td>
+																																																											<td class="name-cell" align="right">
+																																																												<span class="type-span">
+																																																													<p>
+																																																														bool																																																													</p>
+																																																												</span>
+																																																											</td>
+																																																											<td class="name-cell">
+																																																												<a class="docTool_ClassFunctionListLink">
+																																																													<nobr>
+																																																														<p>ProfileUIOpened()</p>
+																																																													</nobr>
+																																																												</a>
+																																																												<div class="name-cell-arguments">
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												profile open ui handler
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																								</tbody>
+																																																							</table>
+																																																						</div>
+																																																					</div>
+																																																				</div>
+																																																			</div>
+																																																		</body>
+																																																	</html>
+
+																																																	<script type="text/javascript" charset="UTF-8" src="../../../../../SearchData.js"></script>
+																																																	<script>
+																																																		setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../../../");
+																																																	</script>

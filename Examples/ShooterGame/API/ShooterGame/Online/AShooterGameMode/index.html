@@ -1,0 +1,1477 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+		<title>AShooterGameMode | Shooter Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch">
+							<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+							<input type="text" name="keyword" class="searchbox" autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="contentContainer" class style="margin-left: 0px;">
+				<div id="pagedefault">
+					<div id="pagecontainer" style="padding-right: 0px; min-height: 49px;">
+						<div class="hero">
+							<div class="info">
+								<div id="pageTitle">
+									<h1 id="H1TitleId">AShooterGameMode</h1>
+								</div>
+									<h2>Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.</h2>
+								</div>
+							</div>
+							<div id="maincol" style="width: calc(100% - 60px); padding-bottom: 100px; height: auto;">
+								<div class="heading expanded">
+									<p>Inheritance Hierarchy</p>
+								</div>
+								<div id="hierarchy">
+									<div class="hierarchy">
+										<table class="hierarchy-table" cellspacing="0" id="hrch">
+											<tbody>
+												<tr>
+													<td class="hierarchy-button-cell">
+														<p>
+															<img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+														</p>
+													</td>
+													<td class='hierarchy-label-cell'>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>References</p>
+							</div>
+							<div id="references">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Module</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														ShooterGame
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Header</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														/ShooterGame/Source/ShooterGame/Public/Online/ShooterGameMode.h
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Include</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														#include "Online/ShooterGameMode.h"
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Syntax</p>
+							</div>
+							<div id="syntax">
+								<div class="simplecode_api">
+									<p>
+										class AShooterGameMode : 
+public 
+AGameMode<br>
+									</p>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Remarks</p>
+							</div>
+							<div id="description" style>
+								<p>
+									Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+								</p>
+							</div>
+							<div class="syntax">
+							<div class="heading expanded">
+								<p>Variables</p>
+							</div>
+								<div id="variables">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+													<th class="icon-cell" style="width:8%">
+													</th>
+													<th class="type-cell" style="width:10%">
+													</th>
+													<th class="name-cell" style="width:15%">
+														Name
+													</th>
+													<th class="desc-cell">
+														Description
+													</th>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>bool</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>bAllowBots</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>bool</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>bNeedsBotCreation</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; AShooterAIController * &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>BotControllers</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Public variable" title="Public variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_public.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TSubclassOf</span> &lt; APawn &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>BotPawnClass</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															The bot pawn class
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>float</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>DamageSelfScale</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															scale for self instigated damage
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>DeathScore</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															score for death
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>KillScore</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															score for kill
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Public variable" title="Public variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_public.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TArray</span> &lt; AShooterPickup * &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>LevelPickups</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>MaxBots</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>RoundTime</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															match duration
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>TimeBetweenMatches</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>FTimerHandle</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>TimerHandle_DefaultTimer</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															Handle for efficient management of DefaultTimer timer
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>int32</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink">
+															<p>WarmupTime</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															delay between first player login and starting match
+														</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="heading expanded">
+									<p>Functions</p>
+								</div>
+								<div id="functions_0">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+												<th class="icon-cell" style="width:10%">
+												</th>
+												<th class="name-cell" style="width:8%;">
+												</th>
+												<th class="name-cell" style="width:15%;">
+													Name
+												</th>
+												<th class="desc-cell">
+													Description
+												</th>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class="type-span">
+														<p>
+															void														</p>
+													</span>
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassFunctionListLink">
+														<nobr>
+															<p>SetAllowBots</p>
+														</nobr>
+													</a>
+													<div class="name-cell-arguments">
+														<p>
+															(
+																<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;
+bool bInAllowBots,<br>
+																		&nbsp;&nbsp;&nbsp;&nbsp;
+int32 InMaxBots																	<br>)<br>
+																</p>
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		void																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink">
+																	<nobr>
+																		<p>PreInitializeComponents()</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		void																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink">
+																	<nobr>
+																		<p>InitGame</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+																	<p>
+																		(
+																			<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;
+const FString & MapName,<br>
+																					&nbsp;&nbsp;&nbsp;&nbsp;
+const FString & Options,<br>
+																						&nbsp;&nbsp;&nbsp;&nbsp;
+FString & ErrorMessage																					<br>)<br>
+																				</p>
+																			</div>
+																		</td>
+																		<td class="desc-cell">
+																			<p>
+																				Initialize the game. This is called before actors\' PreInitializeComponents.
+																			</p>
+																		</td>
+																	</tr>
+																	<tr class="normal-row">
+																		<td class="icon-cell">
+																			<p>
+																				<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																					<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																				</p>
+																			</td>
+																			<td class="name-cell" align="right">
+																				<span class="type-span">
+																					<p>
+																						void																					</p>
+																				</span>
+																			</td>
+																			<td class="name-cell">
+																				<a class="docTool_ClassFunctionListLink">
+																					<nobr>
+																						<p>PreLogin</p>
+																					</nobr>
+																				</a>
+																				<div class="name-cell-arguments">
+																					<p>
+																						(
+																							<br>
+																								&nbsp;&nbsp;&nbsp;&nbsp;
+const FString & Options,<br>
+																									&nbsp;&nbsp;&nbsp;&nbsp;
+const FString & Address,<br>
+																										&nbsp;&nbsp;&nbsp;&nbsp;
+const FUniqueNetIdRepl & UniqueId,<br>
+																											&nbsp;&nbsp;&nbsp;&nbsp;
+FString & ErrorMessage																										<br>)<br>
+																									</p>
+																								</div>
+																							</td>
+																							<td class="desc-cell">
+																								<p>
+																									Accept or reject a player attempting to join the server. Fails login if you set the ErrorMessage to a non-empty string.
+																								</p>
+																							</td>
+																						</tr>
+																						<tr class="normal-row">
+																							<td class="icon-cell">
+																								<p>
+																									<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																										<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																									</p>
+																								</td>
+																								<td class="name-cell" align="right">
+																									<span class="type-span">
+																										<p>
+																											void																										</p>
+																									</span>
+																								</td>
+																								<td class="name-cell">
+																									<a class="docTool_ClassFunctionListLink">
+																										<nobr>
+																											<p>PostLogin</p>
+																										</nobr>
+																									</a>
+																									<div class="name-cell-arguments">
+																										<p>
+																											(
+																												<br>
+																													&nbsp;&nbsp;&nbsp;&nbsp;
+APlayerController * NewPlayer																												<br>)<br>
+																											</p>
+																										</div>
+																									</td>
+																									<td class="desc-cell">
+																										<p>
+																											starts match warmup
+																										</p>
+																									</td>
+																								</tr>
+																								<tr class="normal-row">
+																									<td class="icon-cell">
+																										<p>
+																											<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																												<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																											</p>
+																										</td>
+																										<td class="name-cell" align="right">
+																											<span class="type-span">
+																												<p>
+																													void																												</p>
+																											</span>
+																										</td>
+																										<td class="name-cell">
+																											<a class="docTool_ClassFunctionListLink">
+																												<nobr>
+																													<p>RestartPlayer</p>
+																												</nobr>
+																											</a>
+																											<div class="name-cell-arguments">
+																												<p>
+																													(
+																														<br>
+																															&nbsp;&nbsp;&nbsp;&nbsp;
+AController * NewPlayer																														<br>)<br>
+																													</p>
+																												</div>
+																											</td>
+																											<td class="desc-cell">
+																												<p>
+																													Tries to spawn the player\'s pawn
+																												</p>
+																											</td>
+																										</tr>
+																										<tr class="normal-row">
+																											<td class="icon-cell">
+																												<p>
+																													<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																														<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																													</p>
+																												</td>
+																												<td class="name-cell" align="right">
+																													<span class="type-span">
+																														<p>
+																															AActor 
+*																														</p>
+																													</span>
+																												</td>
+																												<td class="name-cell">
+																													<a class="docTool_ClassFunctionListLink">
+																														<nobr>
+																															<p>ChoosePlayerStart_Implementation</p>
+																														</nobr>
+																													</a>
+																													<div class="name-cell-arguments">
+																														<p>
+																															(
+																																<br>
+																																	&nbsp;&nbsp;&nbsp;&nbsp;
+AController * Player																																<br>)<br>
+																															</p>
+																														</div>
+																													</td>
+																													<td class="desc-cell">
+																														<p>
+																															select best spawn point for player
+																														</p>
+																													</td>
+																												</tr>
+																												<tr class="normal-row">
+																													<td class="icon-cell">
+																														<p>
+																															<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																															</p>
+																														</td>
+																														<td class="name-cell" align="right">
+																															<span class="type-span">
+																																<p>
+																																	bool																																</p>
+																															</span>
+																														</td>
+																														<td class="name-cell">
+																															<a class="docTool_ClassFunctionListLink">
+																																<nobr>
+																																	<p>ShouldSpawnAtStartSpot</p>
+																																</nobr>
+																															</a>
+																															<div class="name-cell-arguments">
+																																<p>
+																																	(
+																																		<br>
+																																			&nbsp;&nbsp;&nbsp;&nbsp;
+AController * Player																																		<br>)<br>
+																																	</p>
+																																</div>
+																															</td>
+																															<td class="desc-cell">
+																																<p>
+																																	always pick new random spawn
+																																</p>
+																															</td>
+																														</tr>
+																														<tr class="normal-row">
+																															<td class="icon-cell">
+																																<p>
+																																	<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																		<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																	</p>
+																																</td>
+																																<td class="name-cell" align="right">
+																																	<span class="type-span">
+																																		<p>
+																																			UClass 
+*																																		</p>
+																																	</span>
+																																</td>
+																																<td class="name-cell">
+																																	<a class="docTool_ClassFunctionListLink">
+																																		<nobr>
+																																			<p>GetDefaultPawnClassForController_Implementation</p>
+																																		</nobr>
+																																	</a>
+																																	<div class="name-cell-arguments">
+																																		<p>
+																																			(
+																																				<br>
+																																					&nbsp;&nbsp;&nbsp;&nbsp;
+AController * InController																																				<br>)<br>
+																																			</p>
+																																		</div>
+																																	</td>
+																																	<td class="desc-cell">
+																																		<p>
+																																			returns default pawn class for given controller
+																																		</p>
+																																	</td>
+																																</tr>
+																																<tr class="normal-row">
+																																	<td class="icon-cell">
+																																		<p>
+																																			<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																				<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																					<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																				</p>
+																																			</td>
+																																			<td class="name-cell" align="right">
+																																				<span class="type-span">
+																																					<p>
+																																						float																																					</p>
+																																				</span>
+																																			</td>
+																																			<td class="name-cell">
+																																				<a class="docTool_ClassFunctionListLink">
+																																					<nobr>
+																																						<p>ModifyDamage</p>
+																																					</nobr>
+																																				</a>
+																																				<div class="name-cell-arguments">
+																																					<p>
+																																						(
+																																							<br>
+																																								&nbsp;&nbsp;&nbsp;&nbsp;
+float Damage,<br>
+																																									&nbsp;&nbsp;&nbsp;&nbsp;
+AActor * DamagedActor,<br>
+																																										&nbsp;&nbsp;&nbsp;&nbsp;
+const FDamageEvent & DamageEvent,<br>
+																																											&nbsp;&nbsp;&nbsp;&nbsp;
+AController * EventInstigator,<br>
+																																												&nbsp;&nbsp;&nbsp;&nbsp;
+AActor * DamageCauser																																											<br>)<br>
+																																										</p>
+																																									</div>
+																																								</td>
+																																								<td class="desc-cell">
+																																									<p>
+																																										prevents friendly fire
+																																									</p>
+																																								</td>
+																																							</tr>
+																																							<tr class="normal-row">
+																																								<td class="icon-cell">
+																																									<p>
+																																										<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																											<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																										</p>
+																																									</td>
+																																									<td class="name-cell" align="right">
+																																										<span class="type-span">
+																																											<p>
+																																												void																																											</p>
+																																										</span>
+																																									</td>
+																																									<td class="name-cell">
+																																										<a class="docTool_ClassFunctionListLink">
+																																											<nobr>
+																																												<p>Killed</p>
+																																											</nobr>
+																																										</a>
+																																										<div class="name-cell-arguments">
+																																											<p>
+																																												(
+																																													<br>
+																																														&nbsp;&nbsp;&nbsp;&nbsp;
+AController * Killer,<br>
+																																															&nbsp;&nbsp;&nbsp;&nbsp;
+AController * KilledPlayer,<br>
+																																																&nbsp;&nbsp;&nbsp;&nbsp;
+APawn * KilledPawn,<br>
+																																																	&nbsp;&nbsp;&nbsp;&nbsp;
+const UDamageType * DamageType																																																<br>)<br>
+																																															</p>
+																																														</div>
+																																													</td>
+																																													<td class="desc-cell">
+																																														<p>
+																																															notify about kills
+																																														</p>
+																																													</td>
+																																												</tr>
+																																												<tr class="normal-row">
+																																													<td class="icon-cell">
+																																														<p>
+																																															<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																	<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																</p>
+																																															</td>
+																																															<td class="name-cell" align="right">
+																																																<span class="type-span">
+																																																	<p>
+																																																		bool																																																	</p>
+																																																</span>
+																																															</td>
+																																															<td class="name-cell">
+																																																<a class="docTool_ClassFunctionListLink">
+																																																	<nobr>
+																																																		<p>CanDealDamage</p>
+																																																	</nobr>
+																																																</a>
+																																																<div class="name-cell-arguments">
+																																																	<p>
+																																																		(
+																																																			<br>
+																																																				&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * DamageInstigator,<br>
+																																																					&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * DamagedPlayer																																																				<br>)<br>
+																																																			</p>
+																																																		</div>
+																																																	</td>
+																																																	<td class="desc-cell">
+																																																		<p>
+																																																			can players damage each other?
+																																																		</p>
+																																																	</td>
+																																																</tr>
+																																																<tr class="normal-row">
+																																																	<td class="icon-cell">
+																																																		<p>
+																																																			<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																				<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																			</p>
+																																																		</td>
+																																																		<td class="name-cell" align="right">
+																																																			<span class="type-span">
+																																																				<p>
+																																																					bool																																																				</p>
+																																																			</span>
+																																																		</td>
+																																																		<td class="name-cell">
+																																																			<a class="docTool_ClassFunctionListLink">
+																																																				<nobr>
+																																																					<p>AllowCheats</p>
+																																																				</nobr>
+																																																			</a>
+																																																			<div class="name-cell-arguments">
+																																																				<p>
+																																																					(
+																																																						<br>
+																																																							&nbsp;&nbsp;&nbsp;&nbsp;
+APlayerController * P																																																						<br>)<br>
+																																																					</p>
+																																																				</div>
+																																																			</td>
+																																																			<td class="desc-cell">
+																																																				<p>
+																																																					always create cheat manager
+																																																				</p>
+																																																			</td>
+																																																		</tr>
+																																																		<tr class="normal-row">
+																																																			<td class="icon-cell">
+																																																				<p>
+																																																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																						<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																					</p>
+																																																				</td>
+																																																				<td class="name-cell" align="right">
+																																																					<span class="type-span">
+																																																						<p>
+																																																							void																																																						</p>
+																																																					</span>
+																																																				</td>
+																																																				<td class="name-cell">
+																																																					<a class="docTool_ClassFunctionListLink">
+																																																						<nobr>
+																																																							<p>DefaultTimer()</p>
+																																																						</nobr>
+																																																					</a>
+																																																					<div class="name-cell-arguments">
+																																																				</div>
+																																																			</td>
+																																																			<td class="desc-cell">
+																																																				<p>
+																																																					update remaining time
+																																																				</p>
+																																																			</td>
+																																																		</tr>
+																																																		<tr class="normal-row">
+																																																			<td class="icon-cell">
+																																																				<p>
+																																																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																						<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																					</p>
+																																																				</td>
+																																																				<td class="name-cell" align="right">
+																																																					<span class="type-span">
+																																																						<p>
+																																																							void																																																						</p>
+																																																					</span>
+																																																				</td>
+																																																				<td class="name-cell">
+																																																					<a class="docTool_ClassFunctionListLink">
+																																																						<nobr>
+																																																							<p>HandleMatchIsWaitingToStart()</p>
+																																																						</nobr>
+																																																					</a>
+																																																					<div class="name-cell-arguments">
+																																																				</div>
+																																																			</td>
+																																																			<td class="desc-cell">
+																																																				<p>
+																																																					called before startmatch
+																																																				</p>
+																																																			</td>
+																																																		</tr>
+																																																		<tr class="normal-row">
+																																																			<td class="icon-cell">
+																																																				<p>
+																																																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																						<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																					</p>
+																																																				</td>
+																																																				<td class="name-cell" align="right">
+																																																					<span class="type-span">
+																																																						<p>
+																																																							void																																																						</p>
+																																																					</span>
+																																																				</td>
+																																																				<td class="name-cell">
+																																																					<a class="docTool_ClassFunctionListLink">
+																																																						<nobr>
+																																																							<p>HandleMatchHasStarted()</p>
+																																																						</nobr>
+																																																					</a>
+																																																					<div class="name-cell-arguments">
+																																																				</div>
+																																																			</td>
+																																																			<td class="desc-cell">
+																																																				<p>
+																																																					starts new match
+																																																				</p>
+																																																			</td>
+																																																		</tr>
+																																																		<tr class="normal-row">
+																																																			<td class="icon-cell">
+																																																				<p>
+																																																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																						<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																					</p>
+																																																				</td>
+																																																				<td class="name-cell" align="right">
+																																																					<span class="type-span">
+																																																						<p>
+																																																							void																																																						</p>
+																																																					</span>
+																																																				</td>
+																																																				<td class="name-cell">
+																																																					<a class="docTool_ClassFunctionListLink">
+																																																						<nobr>
+																																																							<p>HandleStartingNewPlayer_Implementation</p>
+																																																						</nobr>
+																																																					</a>
+																																																					<div class="name-cell-arguments">
+																																																						<p>
+																																																							(
+																																																								<br>
+																																																									&nbsp;&nbsp;&nbsp;&nbsp;
+APlayerController * NewPlayer																																																								<br>)<br>
+																																																							</p>
+																																																						</div>
+																																																					</td>
+																																																					<td class="desc-cell">
+																																																						<p>
+																																																							new player joins
+																																																						</p>
+																																																					</td>
+																																																				</tr>
+																																																				<tr class="normal-row">
+																																																					<td class="icon-cell">
+																																																						<p>
+																																																							<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																								<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																							</p>
+																																																						</td>
+																																																						<td class="name-cell" align="right">
+																																																							<span class="type-span">
+																																																								<p>
+																																																									void																																																								</p>
+																																																							</span>
+																																																						</td>
+																																																						<td class="name-cell">
+																																																							<a class="docTool_ClassFunctionListLink">
+																																																								<nobr>
+																																																									<p>RestartGame()</p>
+																																																								</nobr>
+																																																							</a>
+																																																							<div class="name-cell-arguments">
+																																																						</div>
+																																																					</td>
+																																																					<td class="desc-cell">
+																																																						<p>
+																																																							hides the onscreen hud and restarts the map
+																																																						</p>
+																																																					</td>
+																																																				</tr>
+																																																				<tr class="normal-row">
+																																																					<td class="icon-cell">
+																																																						<p>
+																																																							<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																						</p>
+																																																					</td>
+																																																					<td class="name-cell" align="right">
+																																																						<span class="type-span">
+																																																							<p>
+																																																								void																																																							</p>
+																																																						</span>
+																																																					</td>
+																																																					<td class="name-cell">
+																																																						<a class="docTool_ClassFunctionListLink">
+																																																							<nobr>
+																																																								<p>CreateBotControllers()</p>
+																																																							</nobr>
+																																																						</a>
+																																																						<div class="name-cell-arguments">
+																																																					</div>
+																																																				</td>
+																																																				<td class="desc-cell">
+																																																					<p>
+																																																						Creates AIControllers for all bots
+																																																					</p>
+																																																				</td>
+																																																			</tr>
+																																																			<tr class="normal-row">
+																																																				<td class="icon-cell">
+																																																					<p>
+																																																						<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																					</p>
+																																																				</td>
+																																																				<td class="name-cell" align="right">
+																																																					<span class="type-span">
+																																																						<p>
+																																																							AShooterAIController 
+*																																																						</p>
+																																																					</span>
+																																																				</td>
+																																																				<td class="name-cell">
+																																																					<a class="docTool_ClassFunctionListLink">
+																																																						<nobr>
+																																																							<p>CreateBot</p>
+																																																						</nobr>
+																																																					</a>
+																																																					<div class="name-cell-arguments">
+																																																						<p>
+																																																							(
+																																																								<br>
+																																																									&nbsp;&nbsp;&nbsp;&nbsp;
+int32 BotNum																																																								<br>)<br>
+																																																							</p>
+																																																						</div>
+																																																					</td>
+																																																					<td class="desc-cell">
+																																																						<p>
+																																																							Create a bot
+																																																						</p>
+																																																					</td>
+																																																				</tr>
+																																																				<tr class="normal-row">
+																																																					<td class="icon-cell">
+																																																						<p>
+																																																							<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																						</p>
+																																																					</td>
+																																																					<td class="name-cell" align="right">
+																																																						<span class="type-span">
+																																																							<p>
+																																																								void																																																							</p>
+																																																						</span>
+																																																					</td>
+																																																					<td class="name-cell">
+																																																						<a class="docTool_ClassFunctionListLink">
+																																																							<nobr>
+																																																								<p>StartBots()</p>
+																																																							</nobr>
+																																																						</a>
+																																																						<div class="name-cell-arguments">
+																																																					</div>
+																																																				</td>
+																																																				<td class="desc-cell">
+																																																					<p>
+																																																						spawning all bots for this game
+																																																					</p>
+																																																				</td>
+																																																			</tr>
+																																																			<tr class="normal-row">
+																																																				<td class="icon-cell">
+																																																					<p>
+																																																						<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																							<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																						</p>
+																																																					</td>
+																																																					<td class="name-cell" align="right">
+																																																						<span class="type-span">
+																																																							<p>
+																																																								void																																																							</p>
+																																																						</span>
+																																																					</td>
+																																																					<td class="name-cell">
+																																																						<a class="docTool_ClassFunctionListLink">
+																																																							<nobr>
+																																																								<p>InitBot</p>
+																																																							</nobr>
+																																																						</a>
+																																																						<div class="name-cell-arguments">
+																																																							<p>
+																																																								(
+																																																									<br>
+																																																										&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterAIController * AIC,<br>
+																																																											&nbsp;&nbsp;&nbsp;&nbsp;
+int32 BotNum																																																										<br>)<br>
+																																																									</p>
+																																																								</div>
+																																																							</td>
+																																																							<td class="desc-cell">
+																																																								<p>
+																																																									initialization for bot after creation
+																																																								</p>
+																																																							</td>
+																																																						</tr>
+																																																						<tr class="normal-row">
+																																																							<td class="icon-cell">
+																																																								<p>
+																																																									<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																										<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																									</p>
+																																																								</td>
+																																																								<td class="name-cell" align="right">
+																																																									<span class="type-span">
+																																																										<p>
+																																																											void																																																										</p>
+																																																									</span>
+																																																								</td>
+																																																								<td class="name-cell">
+																																																									<a class="docTool_ClassFunctionListLink">
+																																																										<nobr>
+																																																											<p>DetermineMatchWinner()</p>
+																																																										</nobr>
+																																																									</a>
+																																																									<div class="name-cell-arguments">
+																																																								</div>
+																																																							</td>
+																																																							<td class="desc-cell">
+																																																								<p>
+																																																									check who won
+																																																								</p>
+																																																							</td>
+																																																						</tr>
+																																																						<tr class="normal-row">
+																																																							<td class="icon-cell">
+																																																								<p>
+																																																									<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																										<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																											<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																										</p>
+																																																									</td>
+																																																									<td class="name-cell" align="right">
+																																																										<span class="type-span">
+																																																											<p>
+																																																												bool																																																											</p>
+																																																										</span>
+																																																									</td>
+																																																									<td class="name-cell">
+																																																										<a class="docTool_ClassFunctionListLink">
+																																																											<nobr>
+																																																												<p>IsWinner</p>
+																																																											</nobr>
+																																																										</a>
+																																																										<div class="name-cell-arguments">
+																																																											<p>
+																																																												(
+																																																													<br>
+																																																														&nbsp;&nbsp;&nbsp;&nbsp;
+AShooterPlayerState * PlayerState																																																													<br>)<br>
+																																																												</p>
+																																																											</div>
+																																																										</td>
+																																																										<td class="desc-cell">
+																																																											<p>
+																																																												check if PlayerState is a winner
+																																																											</p>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="normal-row">
+																																																										<td class="icon-cell">
+																																																											<p>
+																																																												<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																													<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																														<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																													</p>
+																																																												</td>
+																																																												<td class="name-cell" align="right">
+																																																													<span class="type-span">
+																																																														<p>
+																																																															bool																																																														</p>
+																																																													</span>
+																																																												</td>
+																																																												<td class="name-cell">
+																																																													<a class="docTool_ClassFunctionListLink">
+																																																														<nobr>
+																																																															<p>IsSpawnpointAllowed</p>
+																																																														</nobr>
+																																																													</a>
+																																																													<div class="name-cell-arguments">
+																																																														<p>
+																																																															(
+																																																																<br>
+																																																																	&nbsp;&nbsp;&nbsp;&nbsp;
+APlayerStart * SpawnPoint,<br>
+																																																																		&nbsp;&nbsp;&nbsp;&nbsp;
+AController * Player																																																																	<br>)<br>
+																																																																</p>
+																																																															</div>
+																																																														</td>
+																																																														<td class="desc-cell">
+																																																															<p>
+																																																																check if player can use spawnpoint
+																																																															</p>
+																																																														</td>
+																																																													</tr>
+																																																													<tr class="normal-row">
+																																																														<td class="icon-cell">
+																																																															<p>
+																																																																<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																																		<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																																	</p>
+																																																																</td>
+																																																																<td class="name-cell" align="right">
+																																																																	<span class="type-span">
+																																																																		<p>
+																																																																			bool																																																																		</p>
+																																																																	</span>
+																																																																</td>
+																																																																<td class="name-cell">
+																																																																	<a class="docTool_ClassFunctionListLink">
+																																																																		<nobr>
+																																																																			<p>IsSpawnpointPreferred</p>
+																																																																		</nobr>
+																																																																	</a>
+																																																																	<div class="name-cell-arguments">
+																																																																		<p>
+																																																																			(
+																																																																				<br>
+																																																																					&nbsp;&nbsp;&nbsp;&nbsp;
+APlayerStart * SpawnPoint,<br>
+																																																																						&nbsp;&nbsp;&nbsp;&nbsp;
+AController * Player																																																																					<br>)<br>
+																																																																				</p>
+																																																																			</div>
+																																																																		</td>
+																																																																		<td class="desc-cell">
+																																																																			<p>
+																																																																				check if player should use spawnpoint
+																																																																			</p>
+																																																																		</td>
+																																																																	</tr>
+																																																																	<tr class="normal-row">
+																																																																		<td class="icon-cell">
+																																																																			<p>
+																																																																				<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																																																																					<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																																																																						<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																																																																					</p>
+																																																																				</td>
+																																																																				<td class="name-cell" align="right">
+																																																																					<span class="type-span">
+																																																																						<p>
+																																																																							TSubclassOf &lt; AGameSession &gt;																																																																						</p>
+																																																																					</span>
+																																																																				</td>
+																																																																				<td class="name-cell">
+																																																																					<a class="docTool_ClassFunctionListLink">
+																																																																						<nobr>
+																																																																							<p>GetGameSessionClass()</p>
+																																																																						</nobr>
+																																																																					</a>
+																																																																					<div class="name-cell-arguments">
+																																																																				</div>
+																																																																			</td>
+																																																																			<td class="desc-cell">
+																																																																				<p>
+																																																																					Returns game session class to use
+																																																																				</p>
+																																																																			</td>
+																																																																		</tr>
+																																																																		<tr class="normal-row">
+																																																																			<td class="icon-cell">
+																																																																				<p>
+																																																																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																																				</p>
+																																																																			</td>
+																																																																			<td class="name-cell" align="right">
+																																																																				<span class="type-span">
+																																																																					<p>
+																																																																						void																																																																					</p>
+																																																																				</span>
+																																																																			</td>
+																																																																			<td class="name-cell">
+																																																																				<a class="docTool_ClassFunctionListLink">
+																																																																					<nobr>
+																																																																						<p>FinishMatch()</p>
+																																																																					</nobr>
+																																																																				</a>
+																																																																				<div class="name-cell-arguments">
+																																																																			</div>
+																																																																		</td>
+																																																																		<td class="desc-cell">
+																																																																			<p>
+																																																																				finish current match and lock players
+																																																																			</p>
+																																																																		</td>
+																																																																	</tr>
+																																																																	<tr class="normal-row">
+																																																																		<td class="icon-cell">
+																																																																			<p>
+																																																																				<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																																			</p>
+																																																																		</td>
+																																																																		<td class="name-cell" align="right">
+																																																																			<span class="type-span">
+																																																																				<p>
+																																																																					void																																																																				</p>
+																																																																			</span>
+																																																																		</td>
+																																																																		<td class="name-cell">
+																																																																			<a class="docTool_ClassFunctionListLink">
+																																																																				<nobr>
+																																																																					<p>RequestFinishAndExitToMainMenu()</p>
+																																																																				</nobr>
+																																																																			</a>
+																																																																			<div class="name-cell-arguments">
+																																																																		</div>
+																																																																	</td>
+																																																																	<td class="desc-cell">
+																																																																		<p>
+																																																																			Only GameInstance should call this function
+																																																																		</p>
+																																																																	</td>
+																																																																</tr>
+																																																																<tr class="normal-row">
+																																																																	<td class="icon-cell">
+																																																																		<p>
+																																																																			<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																																																																				<img alt="Static" title="Static" width="18" src="https://docs.unrealengine.com/Images/api_function_static.png">
+																																																																			</p>
+																																																																		</td>
+																																																																		<td class="name-cell" align="right">
+																																																																			<span class="type-span">
+																																																																				<p>
+																																																																					FString																																																																				</p>
+																																																																			</span>
+																																																																		</td>
+																																																																		<td class="name-cell">
+																																																																			<a class="docTool_ClassFunctionListLink">
+																																																																				<nobr>
+																																																																					<p>GetBotsCountOptionName()</p>
+																																																																				</nobr>
+																																																																			</a>
+																																																																			<div class="name-cell-arguments">
+																																																																		</div>
+																																																																	</td>
+																																																																	<td class="desc-cell">
+																																																																		<p>
+																																																																			get the name of the bots count option used in server travel URL
+																																																																		</p>
+																																																																	</td>
+																																																																</tr>
+																																																															</tbody>
+																																																														</table>
+																																																													</div>
+																																																												</div>
+																																																											</div>
+																																																										</div>
+																																																									</body>
+																																																								</html>
+
+																																																								<script type="text/javascript" charset="UTF-8" src="../../../../SearchData.js"></script>
+																																																								<script>
+																																																									setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../../");
+																																																								</script>
