@@ -1,7 +1,9 @@
 # UE4DocTool
-Github pages site: https://freshmutroom.github.io/UE4DocTool/
+A UE4 plugin that creates documentation pages for UE4 projects, plugins and engines.
 
-Download GUI application of it here: https://drive.google.com/file/d/199DYAOpCZ5nXx-vE7mViBrL9786oCODk/view?usp=sharing (after visiting this page the download button is near the top right corner)
+Some examples of what it can do: https://freshmutroom.github.io/UE4DocTool/
+
+Download GUI application of it here, capable of documenting UE4 projects: https://drive.google.com/file/d/199DYAOpCZ5nXx-vE7mViBrL9786oCODk/view?usp=sharing (after visiting this page the download button is near the top right corner)
 
 To use this application requires the following:
 - Windows 10 (very small chance 7/8/8.1 will work)
