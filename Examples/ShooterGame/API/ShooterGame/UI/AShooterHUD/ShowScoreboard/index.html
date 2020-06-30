@@ -1,0 +1,152 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+	<script src="../../../../../Common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../../Style.css">
+		<title>ShowScoreboard | Shooter Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch">
+						<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+						<input type="text" name="keyword" class="searchbox" autocomplete="off">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="contentContainer" class style="margin-left: 0px;">
+			<div id="pagedefault">
+				<div id="pagecontainer" style="padding-right: 0px; min-height: 5px;">
+					<div class="hero">
+						<div class="info">
+							<div id="pageTitle">
+								<h1 id="H1TitleId">ShowScoreboard</h1>
+							</div>
+							<h2>Toggles in game scoreboard. Note:Will not display if the game menu is visible. </h2>
+						</div>
+					</div>
+					<div id="maincol" style="width: calc(100% - 60px); padding-bottom: 100px;">
+					<div class="syntax">
+						<div class="heading expanded">
+							<p>Returns</p>
+						</div>
+						<div id="returns">
+							<p>true, if the scoreboard visibility changed</p>
+						</div>
+					</div>
+						<div class="heading expanded">
+							<p>References</p>
+						</div>
+						<div id="references">
+							<div class="member-list">
+								<table cellspacing="0">
+									<tbody>
+										<tr class="normal-row">
+											<td class="name-cell">
+												<p>Module</p>
+											</td>
+											<td class="desc-cell">
+												<p>
+													ShooterGame												</p>
+											</td>
+										</tr>
+										<tr class="normal-row">
+											<td class="name-cell">
+												<p>Header</p>
+											</td>
+											<td class="desc-cell">
+												<p>
+													/ShooterGame/Source/ShooterGame/Public/UI/ShooterHUD.h												</p>
+											</td>
+										</tr>
+										<tr class="normal-row">
+											<td class="name-cell">
+												<p>Include</p>
+											</td>
+											<td class="desc-cell">
+												<p>
+													#include &#34;UI/ShooterHUD.h&#34;
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="heading expanded">
+							<p>Syntax</p>
+						</div>
+						<div id="syntax">
+							<div class="simplecode_api">
+								<p>
+									bool ShowScoreboard<br>(<br>&nbsp;&nbsp;&nbsp;&nbsp;bool bEnable,<br>&nbsp;&nbsp;&nbsp;&nbsp;bool bFocus<br>)								</p>
+							</div>
+						</div>
+						<div class="heading expanded">
+							<p>Remarks</p>
+						</div>
+						<div id="description">
+							<p>Toggles in game scoreboard. Note:Will not display if the game menu is visible. </p>
+						</div>
+						<div class="syntax">
+							<div class="heading expanded">
+								<p>Parameters</p>
+							</div>
+							<div id="params">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="header-row">
+												<th class="name-cell" style="width:15%">
+													<p>Parameter</p>
+												</th>
+												<th class="desc-cell" style="width:85%">
+													<p>Description</p>
+												</th>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>bEnable</p>
+												</td>
+												<td class="desc-cell">
+													<p>Required scoreboard display state. </p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>bFocus</p>
+												</td>
+												<td class="desc-cell">
+													<p>Give keyboard focus to the scoreboard. </p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</body>
+		</html>
+
+		<script type="text/javascript" charset="UTF-8" src="../../../../../SearchData.js"></script>
+		<script>
+			setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../../../");
+		</script>
+
+		<script>
+			let elements = document.getElementsByClassName('heading expanded');
+			for (let elem of elements)
+			{
+				let elemToExpandOrCollapse = elem.nextElementSibling;
+				elem.addEventListener('click', function()
+				{
+					onExpandableHeadingClicked(elem, elemToExpandOrCollapse);
+				});
+			}
+		</script>

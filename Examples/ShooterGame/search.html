@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+
+<style>
+
+	.single-result
+	{
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+		font-family: OpenSans, sans-serif;
+		line-height: 1.5;
+	}
+
+	.resultTitleRef
+	{
+		display: inline-block;
+		font-size: 1.2em;
+		font-weight: 400;
+		font-family: OpenSans, sans - serif;
+		line-height: 1.2;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		color: rgb(7, 122, 168);
+		border-width: initial;
+		border-style: none;
+		border-color: initial;
+		border-image: initial;
+		transition: text-decoration 0.3s ease-in-out 0s;
+		text-decoration: none;
+	}
+
+	.resultTitleRef:hover
+	{
+		text-decoration: underline;
+	}
+
+	.resultLinkRef
+	{
+		display: inline-block;
+		font-size: 13px;
+		word-break: break-all;
+		font-weight: 400;
+		line-height: 1.1;
+		color: rgb(0, 102, 33);
+		margin: 5px 0px 3px;
+	}
+
+	.resultDescription
+	{
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.4em;
+		color: rgb(30, 30, 30);
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 11px;
+		margin-left: 0px;
+	}
+
+	.pageNavigationDiv
+	{
+		/* width: 50%; and margin: 0 auto; to center it horizontally.
+		Apparently for this to work the width must be set to any less
+		than the parent div (here I chose 50%) */
+		width: 50%;
+		margin: 0 auto;
+
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.prevResults
+	{
+		font-size: 16px;
+		padding: 7px 12px;
+		cursor: pointer;
+	}
+
+	.pageNavigationAnchor
+	{
+		text-decoration: none;
+		font-size: 32px;
+		color: rgb(7, 122, 168);
+		padding: 7px 12px;
+	}
+
+	.pageNavigationAnchor:hover
+	{
+		background-color: rgb(230, 230, 230);
+	}
+
+	.pageNavigationEllipsisAnchor
+	{
+		text-decoration: none;
+		font-size: 32px;
+		color: rgb(7, 122, 168);
+		padding: 7px 12px;
+		cursor: default;
+	}
+
+	.currentPagePageNavigationAnchor
+	{
+		text-decoration: none;
+		font-size: 32px;
+		color: rgb(255, 255, 255);
+		background-color: rgb(10, 175, 241);
+		border-color: rgb(10, 175, 241);
+		padding: 7px 12px;
+		cursor: pointer;
+	}
+
+	.nextResults
+	{
+		font-size: 16px;
+		padding: 7px 12px;
+		cursor: pointer;
+	}
+
+	.searchbox
+	{
+		display: block;
+		width: calc(100% - 108px);
+		height: 41px;
+		border-width: initial;
+		border-style: none;
+		border-color: initial;
+		border-image: initial;
+		padding: 0px 0px 0px 1em;
+		margin: 2px 0px;
+		outline: none;
+	}
+
+	.filtersList
+	{
+
+	}
+
+	.filterListItem
+	{
+		display: inline;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.filterListItemAnchor
+	{
+		text-decoration: none;
+		font-size: 24px;
+		color: rgb(0, 0, 0);
+	}
+
+	.filterListItemAnchor:hover
+	{
+		color: rgb(10, 175, 241);
+	}
+
+	.activeFilterListItemAnchor
+	{
+		text-decoration: none;
+		font-size: 24px;
+		color: rgb(10, 175, 241);
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.activeCustomFilterListItemAnchor
+	{
+		text-decoration: none;
+		font-size: 24px;
+		color: rgb(10, 175, 241);
+	}
+
+	/* ------------------------------------------------------
+	   --------- Begin Advanced Custom Filter CSS -----------
+	   ------------------------------------------------------ */
+
+	#customSearchOptions_AND
+	{
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+
+	.customANDFilterCheckboxList li
+	{
+		float: left;
+		width: 25%;
+		list-style-type: none;
+	}
+
+	.advancedFilterCheckbox
+	{
+		width: 24px;
+		height: 24px;
+	}
+
+	.disabledAdvancedFilterCheckbox
+	{
+		width: 24px;
+		height: 24px;
+		visibility: hidden;
+	}
+
+	.customAdvancedFilterCheckboxLabel
+	{
+		font-size: 20px;
+	}
+
+	.disabledCustomAdvancedFilterCheckboxLabel
+	{
+		font-size: 20px;
+		visibility: hidden;
+	}
+
+	.clearCustomFiltersButton
+	{
+		font-size: 16px;
+		padding: 7px 12px;
+		cursor: pointer;
+	}
+
+	.applyCustomFiltersButton
+	{
+		font-size: 16px;
+		padding: 7px 12px;
+		cursor: pointer;
+	}
+
+	.customFilterTypeRadioButton
+	{
+		width: 24px;
+		height: 24px;
+	}
+
+	.customFilterTypeRadioButtonLabel
+	{
+		font-size: 24px;
+	}
+
+	/* ---------- End Advanced Custom Filter CSS ---------- */
+
+</style>
+
+
+<script>
+
+	//----------------------------------------------------
+	// ----------- Begin Advanced Filter Code ------------
+	//----------------------------------------------------
+
+	/* Return what mode the custom filter is in e.g. 'AND', 'OR' */
+	function getCustomAdvancedFilterType()
+	{
+		if (document.getElementById('customFilterORFilterRadioButton').checked)
+		{
+			return 'OR';
+		}
+		else  // Assumed it is the AND radio button that is checked
+		{
+			return 'AND';
+		}
+	}
+
+	function clearAllCustomFilterCheckboxes()
+	{
+		/* Note that I do not call onCustomAdvancedCheckboxCheckedStateChanged
+		in these loops (for performance). By the end of this function the result will
+		be the same as if I did */
+		let checkboxes = document.getElementsByClassName('advancedFilterCheckbox');
+		for (let checkbox of checkboxes)
+		{
+			checkbox.checked = false;
+		}
+		let disabledCheckboxes = document.getElementsByClassName('disabledAdvancedFilterCheckbox');
+		/* Create a copy of the array since we change className while iterating it, so if we don't
+		create a copy then elements are missed during iteration */
+		let disabledCheckboxesCopy = [...disabledCheckboxes];
+		for (let checkbox of disabledCheckboxesCopy)
+		{
+			checkbox.checked = false;
+			checkbox.className = 'advancedFilterCheckbox';
+			// Relies on the checkbox being the next sibling
+			let checkboxsLabel = checkbox.nextElementSibling;
+			checkboxsLabel.className = 'customAdvancedFilterCheckboxLabel';
+		}
+
+		customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.clear();
+		window.localStorage.setItem('_checkedCustomFilterCheckboxes', '');
+	}
+
+	/**
+	 *	This function is written with the following assumptions : 
+	 *	1. it is never called when I do checked = true; (and probably checked = false; too) to the radio button.
+	 *	2. that if you click a radio button that's already checked then this function will not run
+	 *	3. that if you click a radio button that isn't checked then this function isn't called on the radio button that looses it's checked state.
+	 *
+	 *	2. and 3. are just for performance, and I think currently so is 1.
+	 */
+	function onCustomFilterTypeRadioButtonChanged()
+	{
+		clearAllCustomFilterCheckboxes();
+
+		if (this.id == 'customFilterORFilterRadioButton')
+		{
+			window.localStorage.setItem('customFilterType', 'ORFilter');
+		}
+		else  // Assumed this.id == 'customFilterANDFilterRadioButton'
+		{
+			window.localStorage.setItem('customFilterType', 'ANDFilter');
+		}
+	}
+
+	function onCustomAdvancedCheckboxCheckedStateChanged(inCheckbox)
+	{
+		if (getCustomAdvancedFilterType() == 'AND')
+		{
+			if (inCheckbox.checked)
+			{
+				let incompatibleOtherFilters = advancedFiltersToIncompatibleAdvancedFilters.get(inCheckbox.id);
+				for (let otherCheckboxId of incompatibleOtherFilters)
+				{
+					let otherCheckbox = document.getElementById(otherCheckboxId);
+					if (customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.has(otherCheckbox) == false)
+					{
+						customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.set(otherCheckbox, new Set());
+					}
+					// MAYBE I am relient here on the fact that set does not allow duplicates, so if the container
+					// ever changes to an array you might have to do a contains check first before pushing to it
+					customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.get(otherCheckbox).add(inCheckbox);
+					otherCheckbox.className = 'disabledAdvancedFilterCheckbox';
+					// Relies on the checkbox being the next sibling
+					let otherCheckboxsLabel = otherCheckbox.nextElementSibling;
+					otherCheckboxsLabel.className = 'disabledCustomAdvancedFilterCheckboxLabel';
+				}
+			}
+			else
+			{
+				let incompatibleOtherFilters = advancedFiltersToIncompatibleAdvancedFilters.get(inCheckbox.id);
+				for (let otherCheckboxId of incompatibleOtherFilters)
+				{
+					let otherCheckbox = document.getElementById(otherCheckboxId);
+					if (customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.has(otherCheckbox))
+					{
+						customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.get(otherCheckbox).delete(inCheckbox);
+						// Check if now nothing is disabling it
+						if (customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes.get(otherCheckbox).size == 0)
+						{
+							otherCheckbox.className = 'advancedFilterCheckbox';
+							// Relies on the checkbox being the next sibling
+							let otherCheckboxsLabel = otherCheckbox.nextElementSibling;
+							otherCheckboxsLabel.className = 'customAdvancedFilterCheckboxLabel';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	function onAdvancedFilterCheckboxClicked()
+	{
+		onCustomAdvancedCheckboxCheckedStateChanged(this);
+
+		if (this.checked)
+		{
+			let str = window.localStorage.getItem('_checkedCustomFilterCheckboxes');
+			if (str == null)
+			{
+				str = '';
+			}
+			str += this.id + ',';
+			window.localStorage.setItem('_checkedCustomFilterCheckboxes', str);
+		}
+		else
+		{
+			let str = window.localStorage.getItem('_checkedCustomFilterCheckboxes');
+			if (str == null)
+			{
+				// User could have cleared their local storage. No worries
+				return;
+			}
+
+			// Remove our id from the string
+			let parsedId = '';
+			let idx = 0;
+			while (true)
+			{
+				if (idx == str.length)
+				{
+					break;
+				}
+
+				let c = str[idx++];
+
+				if (c == ',')
+				{
+					if (parsedId == this.id)
+					{
+						let part1 = str.substring(0, idx - parsedId.length - 1);
+						let part2 = str.substring(idx);
+						window.localStorage.setItem('_checkedCustomFilterCheckboxes', part1 + part2);
+						break;
+					}
+					parsedId = '';
+				}
+				else
+				{
+					parsedId += c;
+				}
+			}
+		}
+	}
+
+	function onClearAdvancedFiltersButtonClicked()
+	{
+		clearAllCustomFilterCheckboxes();
+	}
+
+	function onApplyAdvancedFilterButtonClicked()
+	{
+		let customFilter = '';
+		let customFilterCheckboxes = document.getElementsByClassName('advancedFilterCheckbox');
+		for (let i = customFilterCheckboxes.length - 1; i >= 0; --i)
+		{
+			let elem = customFilterCheckboxes[i];
+			if (elem.checked)
+			{
+				customFilter += elem.id + ',';
+			}
+		}
+
+		// Check if at least one filter checkbox was checked
+		if (customFilter.length > 0)
+		{
+			// Remove the ',' at the end
+			customFilter = customFilter.slice(0, -1);
+
+			let urlString = 'search.html';
+			let filterTypeString = undefined;
+			if (document.getElementById('customFilterORFilterRadioButton').checked)
+			{
+				filterTypeString = 'custom_OR_';
+			}
+			else  // Assumed document.getElementById('customFilterANDFilterRadioButton').checked
+			{
+				filterTypeString = 'custom_AND_';
+			}
+			urlString += '?filter=' + filterTypeString + '[' + customFilter + ']';
+			urlString += '&keyword=' + document.getElementsByClassName('searchbox')[0].value;
+			window.location.href = urlString;
+		}
+	}
+
+	// ------------ End Advanced Filter Code -------------
+
+	const maxResultsPerPage = 10;
+
+	// Custom filter checkboxes that are checked
+	let checkedCustomFilterCheckboxes = new Set();
+
+	// These 2 variables were mainly added for if there are multiple
+	// custom filter buttons
+	let customFilterOptionsDivWantingToBeShown = null;
+	let customFilterOptionsDivEitherPartiallyShownOrFullyShown = null;
+
+	/* Maps from custom advanced filter checkbox to a set of checkboxes
+	that are both:
+	1. checked
+	2. incompatible with the map's key */
+	let customAdvancedCheckboxToCheckedIncompatibleCustomAdvancedCheckboxes = new Map();
+
+	document.addEventListener('DOMContentLoaded', function()
+	{
+		let urlParams = new URLSearchParams(window.location.search);
+		let filter = '-1'; // Maybe this is better: document.getElementsByClassName('searchbox')[0].parentElement.getAttribute('data-filter')
+		let customFilterType = 'no';
+		if (urlParams.has('filter'))
+		{
+			filter = urlParams.get('filter');
+		}
+		if (filter.startsWith('custom_OR_'))
+		{
+			customFilterType = 'OR';
+		}
+		else if (filter.startsWith('custom_AND_'))
+		{
+			customFilterType = 'AND';
+		}
+
+		/* Check the appropriate radio box for the custom filter.
+		Before doing that though
+		check if the page params had filter as a param and if yes
+		then check if it is a custom filter and if yes again then store
+		in localStorage the appropriate value for the custom filter type
+		radio box. We do this cause if the user clears their localStorage
+		and loads a page with a custom filter as a page param then we want
+		the corrisponding radio box checked as opposed to possibly something
+		else */
+		if (urlParams.has('filter'))
+		{
+			let val = urlParams.get('filter');
+			if (val.startsWith('custom_OR_'))
+			{
+				window.localStorage.setItem('customFilterType', 'ORFilter');
+			}
+			else if (val.startsWith('custom_AND_'))
+			{
+				window.localStorage.setItem('customFilterType', 'ANDFilter');
+			}
+		}
+		let	customFilterTypeString = window.localStorage.getItem('customFilterType');
+		if (customFilterTypeString == null)
+		{
+			/* Probably first time loading page or user cleared local storage.
+			We will choose AND filter */
+			customFilterTypeString = 'ANDFilter';
+			window.localStorage.setItem('customFilterType', customFilterTypeString);
+		}
+		if (customFilterTypeString == 'ORFilter')
+		{
+			document.getElementById('customFilterORFilterRadioButton').checked = true;
+		}
+		else  // Assumed 'ANDfilter'
+		{
+			document.getElementById('customFilterANDFilterRadioButton').checked = true;
+		}
+
+		checkedCustomFilterCheckboxes = getActiveCustomFilterCheckboxes('_checkedCustomFilterCheckboxes', customFilterType, filter);
+		// Check all the custom filter checkboxes that should be checked.
+		for (let checkbox of checkedCustomFilterCheckboxes)
+		{
+			checkbox.checked = true;
+			onCustomAdvancedCheckboxCheckedStateChanged(checkbox);
+		}
+
+		if (urlParams.has('keyword'))
+		{
+			let searchPhrase = urlParams.get('keyword');
+
+			// Set the input box text to what the user searched.
+			// Pretty much for visuals only
+			document.getElementsByClassName('searchbox')[0].value = searchPhrase;
+
+			// Remove spaces from the start and end of the string
+			let postProcessedText = searchPhrase.trim();
+			// Replace runs of spaces/tabs/newlines/etc with a single space
+			postProcessedText = postProcessedText.replace(/\s\s+/g, ' ');
+
+			const options = {
+				allowTypo: false,
+				keys: ['searchName', 'altSearchName'],
+				/* Score function that treats searchName and altSearchName equal
+				Uhh, I *think* that might happen by default so I have commented it */
+				//scoreFn: a => Math.max(a[0] ? a[0].score : -100000, a[1] ? a[1].score : -100000)
+			};
+
+			let resultContentDiv = document.getElementsByClassName('result-content')[0];
+
+			let results = undefined;
+
+			// -1 is code for "no filter" i.e. include everything
+			if (filter == '-1')
+			{
+				results = fuzzysort.go(postProcessedText, searchData, options);
+			}
+			else
+			{
+				if (customFilterType === 'OR')
+				{
+					let ORFilter = getCustomORFilter(checkedCustomFilterCheckboxes);
+					results = fuzzysort.go(postProcessedText, searchData.filter(function(x)
+					{
+						for (let a of ORFilter)
+						{
+							for (let b of a)
+							{
+								if (((x.filterFlags & b.excludeFilter) == 0n) && ((x.filterFlags & b.filter) == b.filter))
+								{
+									return true;
+								}
+							}
+						}
+						return false;
+					}), options);
+				}
+				else if (customFilterType === 'AND')
+				{
+					let ANDFilter = getCustomANDFilter(checkedCustomFilterCheckboxes);
+					results = fuzzysort.go(postProcessedText, searchData.filter(function(x)
+					{
+						if ((x.filterFlags & ANDFilter.excludeFilter) != 0n)
+						{
+							return false;
+						}
+
+						for (let a of ANDFilter.filters)
+						{
+							let bInclude = false;
+							for (let b of a)
+							{
+								if (((x.filterFlags & b.excludeFilter) == 0n) && ((x.filterFlags & b.filter) == b.filter))
+								{
+									bInclude = true;
+									break;
+								}
+							}
+
+							if (bInclude == false)
+							{
+								return false;
+							}
+						}
+
+						return true;
+					}), options);
+				}
+				else
+				{
+					if (filter.startsWith('basic_OR_'))
+					{
+						let theFilter = getSingleFilterUsingFilterString(filter.substring(9));
+						results = fuzzysort.go(postProcessedText, searchData.filter(function(x)
+						{
+							return ((x.filterFlags & theFilter.filter) != 0n) && ((x.filterFlags & theFilter.excludeFilter) == 0n);
+						}), options);
+					}
+					else
+					{
+						let ANDFilter = getFilterUsingFilterString(filter);
+						results = fuzzysort.go(postProcessedText, searchData.filter(function(x)
+						{
+							for (let a of ANDFilter)
+							{
+								if (((x.filterFlags & b.excludeFilter) == 0n) && ((x.filterFlags & b.filter) == b.filter))
+								{
+									return true;
+								}
+							}
+							return false;
+						}), options);
+					}
+				}
+			}
+
+			if (results.length == 0)
+			{
+				let newParagraph = document.createElement('p');
+				newParagraph.className = 'noResults';
+				newParagraph.innerHTML = 'No results';
+				resultContentDiv.appendChild(newParagraph);
+			}
+			else
+			{
+				let offset = undefined;
+				if (urlParams.has('offset'))
+				{
+					offset = parseInt(urlParams.get('offset'));
+					if (offset < 0)
+					{
+						offset = 0;
+					}
+					else if (offset >= results.length)
+					{
+						// Set offset so at least 1 result is viewed
+						offset = results.length - 1;
+					}
+				}
+				else
+				{
+					offset = 0;
+				}
+
+				let listDiv = document.createElement('div');
+				listDiv.className = 'result-list';
+				resultContentDiv.appendChild(listDiv);
+
+				let idx = offset;
+				let stopIndex = idx + maxResultsPerPage;
+				if (stopIndex > results.length)
+				{
+					stopIndex = results.length;
+				}
+
+				while (true)
+				{
+					if (idx == stopIndex)
+					{
+						break;
+					}
+
+					let ourResult = results[idx].obj;
+
+					let singleResultDiv = document.createElement('div');
+					singleResultDiv.className = 'single-result';
+					let resultTitleDiv = document.createElement('div');
+					resultTitleDiv.className = 'resultTitle';
+					let ref = document.createElement('a');
+					ref.className = 'resultTitleRef';
+					ref.href = ourResult.relativeURL;
+					ref.innerHTML = ourResult.searchName + ' | Shooter Game Documentation';
+					singleResultDiv.appendChild(resultTitleDiv);
+					resultTitleDiv.appendChild(ref);
+					let linkDiv = document.createElement('div');
+					linkDiv.className = 'resultLink';
+					let anotherRef = document.createElement('a');
+					anotherRef.className = 'resultLinkRef';
+					anotherRef.href = ourResult.relativeURL;
+					anotherRef.innerHTML = ourResult.relativeURL;
+					linkDiv.appendChild(anotherRef);
+					singleResultDiv.appendChild(linkDiv);
+					let descriptionParagraph = document.createElement('p');
+					descriptionParagraph.className = 'resultDescription';
+					descriptionParagraph.innerHTML = ourResult.description;
+					singleResultDiv.appendChild(descriptionParagraph);
+
+					listDiv.appendChild(singleResultDiv);
+
+					idx++;
+				}
+
+				//-----------------------------------------------
+				// Page navigation bar
+				//-----------------------------------------------
+
+				const totalPagesWorthOfResults = Math.floor(results.length / maxResultsPerPage) + (results.length % maxResultsPerPage > 0 ? 1 : 0);
+				const pageWeAreOnNow = Math.floor(offset / maxResultsPerPage) + 1;
+				const numPagesBeforePageWeAreOnNow = pageWeAreOnNow - 1;
+				const numPagesAfterPageWeAreOnNow = totalPagesWorthOfResults - pageWeAreOnNow;
+				const bShouldCreateBackOnePageButton = (offset > 0);
+				const bShouldCreateForwardOnePageButton = (idx < results.length);
+				if (totalPagesWorthOfResults > 1)
+				{
+					let newDiv = document.createElement('div');
+					newDiv.className = 'pageNavigationDiv';  //'BingResultsList__Pagination-sc-1rrcs1t-2 gmWXIw';
+
+					if (bShouldCreateBackOnePageButton)
+					{
+						let backButton = document.createElement('button');
+						backButton.className = 'prevResults';
+						let newSpan = document.createElement('span');
+						newSpan.innerHTML = 'Previous';
+						backButton.appendChild(newSpan);
+						backButton.addEventListener('click', function()
+						{
+							let urlParms = new URLSearchParams(window.location.search);
+							let offset = undefined;
+							if (urlParms.has('offset'))
+							{
+								offset = parseInt(urlParms.get('offset'));
+								offset -= maxResultsPerPage;
+								if (offset < 0)
+								{
+									offset = 0;
+								}
+							}
+							else
+							{
+								/* Offset not present in params, I guess set it to 0 */
+								offset = 0;
+							}
+							let urlString = 'search.html';							urlString += '?offset=' + offset.toString();
+							// Add the rest of the params
+							for ([key, value] of urlParms.entries())
+							{
+								// Skip offset; already did it
+								if (key != 'offset')
+								{
+									urlString += '&' + key + '=' + value;
+								}
+							}
+							window.location.href = urlString;
+						});
+						newDiv.appendChild(backButton);
+					}
+
+					//----------------------------------------------
+					// Create the page number buttons and the ellipsis elements if required
+					// Similar to how github.com does it, although you might be able to come
+					// up with what you think is a better design.
+					// One thing I would really like to do with it is make it so
+					// the 'previous page' and 'next page' buttons are always
+					// at the exact same horizontal and vertical position relative to
+					// the bottom of the page. That way users can click the button, then on
+					// the page that loads they can just scroll to the bottom and click their
+					// mouse and they would have clicked the same button again. Makes for
+					// fast browsing through pages. Maybe you could even do it with the
+					// 'page number' buttons too, but perhaps the number of pages returned from
+					// the search is tens or possibly hundreds of thousands, so you would have
+					// to fit "100 000" as the text on those buttons which is why maybe it's non-trival
+					// (cause you'll have times where you have only "5", "6", "7" etc along
+					// the bottom and then there'll be times where there's "198 000", "198 001" etc)
+					// Well actually I don't know how hard it would be cause I don't know CCS that well.
+
+					function createExactPageNavigationElement(inDisplayText, bIsForPageWeAreCurrentlyOn = false)
+					{
+						let pageNavAnchor = document.createElement('a');
+						if (bIsForPageWeAreCurrentlyOn)
+						{
+							pageNavAnchor.className = 'currentPagePageNavigationAnchor';
+						}
+						else if (inDisplayText == '...')
+						{
+							pageNavAnchor.className = 'pageNavigationEllipsisAnchor';
+						}
+						else
+						{
+							pageNavAnchor.className = 'pageNavigationAnchor';
+						}
+						pageNavAnchor.textContent = inDisplayText;
+						if (bIsForPageWeAreCurrentlyOn == false && inDisplayText !='...')
+						{
+							let urlString = 'search.html';
+							urlString += '?keyword=' + urlParams.get('keyword');
+							urlString += '&filter=' + urlParams.get('filter');
+							urlString += '&offset=' + (parseInt(inDisplayText) - 1) * maxResultsPerPage;
+							pageNavAnchor.href = urlString;
+						}
+						newDiv.appendChild(pageNavAnchor);
+					}
+
+					/* Create elements for pages lower than the page we are on now */
+					if (numPagesBeforePageWeAreOnNow > 0)
+					{
+						let pageNum = 1;
+						let pageNumForEllipsis = undefined;
+						let pageNumToSetAfterDoingEllipsis = undefined;
+						// Set value of pageNumForEllipsis and pageNumToSetAfterDoingEllipsis
+						if (totalPagesWorthOfResults > 11 && pageWeAreOnNow >= 7)
+						{
+							pageNumForEllipsis = 3;
+							if (numPagesAfterPageWeAreOnNow < 5)
+							{
+								pageNumToSetAfterDoingEllipsis = pageWeAreOnNow - 2 - (5 - numPagesAfterPageWeAreOnNow);
+							}
+							else
+							{
+								pageNumToSetAfterDoingEllipsis = pageWeAreOnNow - 2;
+							}
+						}
+						else
+						{
+							// -1 meaining 'no ellipsis'
+							pageNumForEllipsis = -1;
+						}
+
+						while (true)
+						{
+							if (pageNum == pageNumForEllipsis)
+							{
+								createExactPageNavigationElement('...');
+								pageNum = pageNumToSetAfterDoingEllipsis;
+							}
+							else
+							{
+								createExactPageNavigationElement(pageNum.toString());
+								pageNum++;
+							}
+
+							if (pageNum == pageWeAreOnNow)
+							{
+								break;
+							}
+						}
+					}
+
+					/* Create element for the page we are on now */
+					createExactPageNavigationElement(pageWeAreOnNow.toString(), true);
+
+					/* Create elements for pages higher than the page we are on now */
+					if (numPagesAfterPageWeAreOnNow > 0)
+					{
+						let pageNum = pageWeAreOnNow + 1;
+						let pageNumForEllipsis = undefined;
+						// Set value of pageNumForEllipsis
+						if (totalPagesWorthOfResults > 11 && numPagesAfterPageWeAreOnNow > 5)
+						{
+							if (pageWeAreOnNow <= 5)
+							{
+								pageNumForEllipsis = 9;
+							}
+							else
+							{
+								pageNumForEllipsis = pageWeAreOnNow + 3;
+							}
+						}
+						else
+						{
+							// -1 meaning 'no ellipsis'
+							pageNumForEllipsis = -1;
+						}
+
+						while (true)
+						{
+							if (pageNum == pageNumForEllipsis)
+							{
+								createExactPageNavigationElement('...');
+								pageNum = totalPagesWorthOfResults - 1;
+							}
+							else
+							{
+								createExactPageNavigationElement(pageNum.toString());
+								pageNum++;
+							}
+
+							if (pageNum > totalPagesWorthOfResults)
+							{
+								break;
+							}
+						}
+					}
+
+					//----------------------------------------------
+
+					if (bShouldCreateForwardOnePageButton)
+					{
+						let forwardButton = document.createElement('button');
+						forwardButton.className = 'nextResults';
+						let newSpan = document.createElement('span');
+						newSpan.innerHTML = 'Next';
+						forwardButton.appendChild(newSpan);
+						forwardButton.addEventListener('click', function()
+						{
+							let urlParms = new URLSearchParams(window.location.search);
+							let offset = undefined;
+							if (urlParms.has('offset'))
+							{
+								offset = parseInt(urlParms.get('offset'));
+								offset += maxResultsPerPage;
+							}
+							else
+							{
+								offset = maxResultsPerPage;
+							}
+							let urlString = 'search.html';							urlString += '?offset=' + offset.toString();
+							// Add the rest of the params
+							for ([key, value] of urlParms.entries())
+							{
+								// Skip offset; already did it
+								if (key != 'offset')
+								{
+									urlString += '&' + key + '=' + value;
+								}
+							}
+							window.location.href = urlString;
+						});
+						newDiv.appendChild(forwardButton);
+					}
+
+					document.getElementsByClassName('results-list-div')[0].appendChild(newDiv);
+
+					//---------------------------------------------
+				}
+			}
+		}
+
+		//----------------------------------
+		// Setup the filter buttons
+		//----------------------------------
+
+		/* @todo: from my testing sometimes if you click a custom filter anchor multiple times
+		quite fast you can cause the other custom filter anchor to do
+		nothing when clicked */
+		function onSelectCustomFilterAnchorClicked(event, inFilterOptionsDivId)
+		{
+			// preventDefault to stop adding # to url (since href == #)
+			event.preventDefault();
+
+			let div = document.getElementById(inFilterOptionsDivId);
+			if (customFilterOptionsDivEitherPartiallyShownOrFullyShown != null)
+			{
+				// Check if the options div is being displayed
+				if (customFilterOptionsDivEitherPartiallyShownOrFullyShown == div)
+				{
+					// Toggle custom filter's display
+					if (div.style.maxHeight)
+					{
+						div.style.maxHeight = null;
+					}
+					else
+					{
+						div.style.maxHeight = div.scrollHeight + 'px';
+					}
+				}
+				else
+				{
+					customFilterOptionsDivWantingToBeShown = div;
+					customFilterOptionsDivEitherPartiallyShownOrFullyShown.style.maxHeight = null;
+				}
+			}
+			else
+			{
+				customFilterOptionsDivEitherPartiallyShownOrFullyShown = div;
+				div.style.maxHeight = div.scrollHeight + 'px';
+			}
+
+			triggerOnTransitionEndCallbackIfHasNoTransition(customFilterOptionsDivEitherPartiallyShownOrFullyShown);
+		}
+
+		let filterAnchors = document.getElementsByClassName('filterListItemAnchor');
+		/* The following comment explains why I create a copy of
+		the array filterAnchors.
+		Below when I iterate filterAnchors I change className of it's
+		elements. What's crazy is that this actually causes the array to
+		update (lose the element) */
+		let anchorArray = [...filterAnchors];
+		for (let i = 0; i < anchorArray.length; ++i)
+		{
+			let elem = anchorArray[i];
+			let elemsFilter = elem.getAttribute('data-filter');
+			// Can actually probably just inline this event in html
+			if (elemsFilter.startsWith('custom'))
+			{
+				if (elemsFilter.endsWith('Advanced'))
+				{
+					elem.addEventListener('click', function(event)
+					{
+						onSelectCustomFilterAnchorClicked(event, 'customSearchOptions_AND');
+					});
+				}
+				else
+				{
+					elem.addEventListener('click', function(event)
+					{
+						onSelectCustomFilterAnchorClicked(event, 'customSearchOptions_OR');
+					});
+				}
+			}
+			else
+			{
+				elem.addEventListener('click', function(event)
+				{
+					let urlString = 'search.html';
+					urlString += '?filter=' + this.getAttribute('data-filter');
+					urlString += '&keyword=' + document.getElementsByClassName('searchbox')[0].value;
+					this.href = urlString;
+				});
+			}
+			// Check if the anchor's filter is the one in effect
+			if (customFilterType === 'OR' || customFilterType === 'AND')
+			{
+				if (elemsFilter == 'customAdvanced')
+				{
+					elem.className = 'activeCustomFilterListItemAnchor';
+
+					/* Set placeholder text on search box */
+					let filtersPlaceholderText = elem.getAttribute('data-filterPlaceholderText');
+					if (filtersPlaceholderText == null)
+					{
+						filtersPlaceholderText = '';
+					}
+					document.getElementsByClassName('searchbox')[0].placeholder = filtersPlaceholderText;
+				}
+			}
+			else
+			{
+				if (filter == elemsFilter)
+				{
+					elem.className = 'activeFilterListItemAnchor';
+
+					/* Set placeholder text on search box */
+					let filtersPlaceholderText = elem.getAttribute('data-filterPlaceholderText');
+					if (filtersPlaceholderText == null)
+					{
+						filtersPlaceholderText = '';
+					}
+					document.getElementsByClassName('searchbox')[0].placeholder = filtersPlaceholderText;
+				}
+			}
+		}
+
+		//-------------------------------------
+		//  Setup custom filter divs
+		//-------------------------------------
+
+		/* Ment to return whether the div has a transition for when we show/hide it.
+		Because I toggle the value of max-height to show/hide the custom filter options
+		divs that is what I check for */
+		function doesCustomFilterOptionsDivHaveShowAndHideTransition(inDiv)
+		{
+			let transitionStyleString = window.getComputedStyle(inDiv).getPropertyValue('transition');
+
+			/* This loop is basically checking if max-height is an attribute in
+			in the transition style string. It handles cases where there are
+			other attributes in there like 'AAAmax-height' or 'max-heightAAA' */
+			let idx = 0;
+			while (idx < transitionStyleString.length - 12)
+			{
+				if (transitionStyleString.substring(idx, idx + 11) == 'max-height ')
+				{
+					/* This if statement filters out cases where there are
+					letters in the attribute name preceding 'max-height'
+					e.g. something like 'AAAmax-height' */
+					if ((idx == 0) || (transitionStyleString[idx - 1] == ' '))
+					{
+						// Check the transition's duration is greater than 0
+						return transitionStyleString.substring(idx + 11, idx + 13) != '0s';
+					}
+				}
+
+				idx++;
+			}
+
+			return false;
+		}
+
+		/* This function was added in case I choose to remove transitions for
+		the custom filter options divs */
+		function triggerOnTransitionEndCallbackIfHasNoTransition(inDiv)
+		{
+			if (doesCustomFilterOptionsDivHaveShowAndHideTransition(inDiv) == false)
+			{
+				onCustomFilterOptionsDivTransitionEnd(inDiv);
+			}
+		}
+
+		function onCustomFilterOptionsDivTransitionEnd(inDiv)
+		{
+			if (inDiv.style.maxHeight)
+			{
+				// Transitioned from not being shown to being shown
+			}
+			else
+			{
+				// Transitioned from being shown to not being shown
+				customFilterOptionsDivEitherPartiallyShownOrFullyShown = null;
+				if (customFilterOptionsDivWantingToBeShown != null)
+				{
+					customFilterOptionsDivEitherPartiallyShownOrFullyShown = customFilterOptionsDivWantingToBeShown;
+					customFilterOptionsDivEitherPartiallyShownOrFullyShown.style.maxHeight = customFilterOptionsDivEitherPartiallyShownOrFullyShown.scrollHeight + 'px';
+					customFilterOptionsDivWantingToBeShown = null;
+				}
+			}
+		}
+
+		let customANDFilterDiv = document.getElementById('customSearchOptions_AND');
+		customANDFilterDiv.addEventListener('webkitTransitionEnd', function()
+		{
+			onCustomFilterOptionsDivTransitionEnd(this);
+		});
+	}, false);
+
+</script>
+
+
+<html>
+	<head>
+		<script type='text/javascript' charset="UTF-8" src='SearchData.js'></script>
+		<script type='text/javascript' src='https://rawgit.com/farzher/fuzzysort/master/fuzzysort.js'></script>
+		<title>Shooter Game Documentation Search Results</title>
+	</head>
+
+	<body>
+		<div class="ue-react" id="ueReactWrapper">
+			<div style='padding-left: 15px; padding-right: 15px;'>
+				<div class="SearchPage__SearchWrap-sc-1vapid3-0 iniDLL">
+					<div class="SearchView__Wrap-sc-14vhvmb-0 hEFbdZ">
+						<div class="container">
+							<div style='padding-top: 1.25em; padding-bottom: 1.25em;'>
+								<div class="section-header-imagebg"></div>
+								<div class="name-container"><h1><span>Search</span></h1></div>
+							</div>
+						</div>
+						<div class="searchView">
+							<div class="container">
+								<div class="results-list-div">
+									<div style='background-color: rgb(10, 175, 241); /*height: 45px;*/ padding-left: 2px; position: relative; border-radius: 5px; overflow: hidden; margin: 0px;'>
+										<form name="bodySearch">
+											<input type="hidden" name="filter" value ="Documentation">
+											<input type="text" name="keyword" class="searchbox" autocomplete="off">
+										</form>										<button id="performSearchButton" style='position: absolute; height: 100%; width: 100px; right: 0px; top: 0px; font-weight: 500; text-align: center; color: white; font-size: 1.1em; padding: 0px; transition: background 0.2s ease-in-out 0s; background: transparent;'>Search</button>
+									</div>
+									<ul class="filtersList">
+										<li class="filterListItem">
+											<a class="filterListItemAnchor" href="#" data-filter="basic_OR_[(0xffffffffffffffff,0x0000000180000000)]" data-filterPlaceholderText="Search Documentation...">All</a>
+										</li>
+										<li class="filterListItem">
+											<a class="filterListItemAnchor" href="#" data-filter="basic_OR_[(0x0000603f,0x0000000180000000)]" data-filterPlaceholderText="Search C++ API...">C++ API</a>
+										</li>
+										<li class="filterListItem">
+											<a class="filterListItemAnchor" href="#" data-filter="basic_OR_[(0x00008040,0x00000000)]" data-filterPlaceholderText="Search Blueprint API...">Blueprint API</a>
+										</li>
+										<li class="filterListItem">
+											<a class="filterListItemAnchor" href="#" data-filter="basic_OR_[(0x00011f80,0x00000000)]" data-filterPlaceholderText="Search Content API...">Content API</a>
+										</li>
+										<li class='filterListItem'>
+											<a class='filterListItemAnchor' href='#' data-filter='customAdvanced' data-filterPlaceholderText=''>Custom</a>
+										</li>
+									</ul>
+									<div id="customSearchOptions_AND">
+										<div>
+										<input type="radio" id="customFilterORFilterRadioButton" class="customFilterTypeRadioButton" name="customFilterType" onchange='onCustomFilterTypeRadioButtonChanged.call(this)'><label class="customFilterTypeRadioButtonLabel" for="customFilterORFilterRadioButton">OR</label><br>
+										<input type="radio" id="customFilterANDFilterRadioButton" class="customFilterTypeRadioButton" name="customFilterType" onchange='onCustomFilterTypeRadioButtonChanged.call(this)'><label class="customFilterTypeRadioButtonLabel" for="customFilterANDFilterRadioButton">AND</label><br>
+									</div>
+										<ul class="customANDFilterCheckboxList">
+											<li><input type='checkbox' id='advancedFilter_0' class='advancedFilterCheckbox' data-filter='[(0x00000001,0x00000000)(0x00000002,0x00000000)(0x00000004,0x00000000)(0x00000008,0x00000000)(0x00000010,0x00000000)(0x00000020,0x00000000)(0x00002000,0x00000000)(0x00004000,0x00000000)]' data-antiFilter='0xfffffff000019fc0' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_0' class='customAdvancedFilterCheckboxLabel'>C++ API</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_1' class='advancedFilterCheckbox' data-filter='[(0x00000040,0x00000000)(0x00008000,0x00000000)]' data-antiFilter='0xfffffff7dd017fbf' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_1' class='customAdvancedFilterCheckboxLabel'>Blueprint API</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_2' class='advancedFilterCheckbox' data-filter='[(0x00000080,0x00000000)(0x00000100,0x00000000)(0x00000200,0x00000000)(0x00000400,0x00000000)(0x00000800,0x00000000)(0x00001000,0x00000000)(0x00010000,0x00000000)]' data-antiFilter='0xfffffff7ff00e07f' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_2' class='customAdvancedFilterCheckboxLabel'>Content API</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_3' class='advancedFilterCheckbox' data-filter='[(0x00000001,0x00000000)(0x00000080,0x00000000)]' data-antiFilter='0xfffffffbfb8fff7e' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_3' class='customAdvancedFilterCheckboxLabel'>Classes</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_4' class='advancedFilterCheckbox' data-filter='[(0x00000002,0x00000000)(0x00000200,0x00000000)]' data-antiFilter='0xfffffffbf78ffdfd' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_4' class='customAdvancedFilterCheckboxLabel'>Structs</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_5' class='advancedFilterCheckbox' data-filter='[(0x00000008,0x00000000)]' data-antiFilter='0xffffffffef8ffff7' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_5' class='customAdvancedFilterCheckboxLabel'>Enums</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_6' class='advancedFilterCheckbox' data-filter='[(0x00000004,0x00000000)]' data-antiFilter='0xfffffffffffffffb' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_6' class='customAdvancedFilterCheckboxLabel'>Namespaces</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_7' class='advancedFilterCheckbox' data-filter='[(0x00000010,0x00000000)(0x00000040,0x00000000)(0x00000800,0x00000000)]' data-antiFilter='0xfffffff65c01f7af' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_7' class='customAdvancedFilterCheckboxLabel'>Functions</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_8' class='advancedFilterCheckbox' data-filter='[(0x00000020,0x00000000)(0x00001000,0x00000000)]' data-antiFilter='0xffffffffbe0defdf' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_8' class='customAdvancedFilterCheckboxLabel'>Variables</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_9' class='advancedFilterCheckbox' data-filter='[(0x80000000,0x00000000)]' data-antiFilter='0xffffffff7c0fffef' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_9' class='customAdvancedFilterCheckboxLabel'>Constructor</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_10' class='advancedFilterCheckbox' data-filter='[(0x0000000100000000,0x00000000)]' data-antiFilter='0xfffffffefc03ffef' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_10' class='customAdvancedFilterCheckboxLabel'>Destructor</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_11' class='advancedFilterCheckbox' data-filter='[(0x0000000400000000,0x00000000)]' data-antiFilter='0xfffffff3f18ffffc' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_11' class='customAdvancedFilterCheckboxLabel'>Final</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_12' class='advancedFilterCheckbox' data-filter='[(0x00000080,0x00000000)(0x00000100,0x00000000)(0x00000200,0x00000000)]' data-antiFilter='0xfffffffffffffc7f' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_12' class='customAdvancedFilterCheckboxLabel'>Blueprint Assets</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_13' class='advancedFilterCheckbox' data-filter='[(0x00002000,0x00000000)(0x00004000,0x00000000)]' data-antiFilter='0xffffffffffff9fff' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_13' class='customAdvancedFilterCheckboxLabel'>Source Code Folders</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_14' class='advancedFilterCheckbox' data-filter='[(0x00010000,0x00000000)]' data-antiFilter='0xfffffffffffeffff' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_14' class='customAdvancedFilterCheckboxLabel'>Asset Folders</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_15' class='advancedFilterCheckbox' data-filter='[(0x00020000,0x00000000)]' data-antiFilter='0xffffffffdc0de38f' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_15' class='customAdvancedFilterCheckboxLabel'>Static</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_16' class='advancedFilterCheckbox' data-filter='[(0x0000000200000000,0x00000000)]' data-antiFilter='0xfffffffdfc8fffef' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_16' class='customAdvancedFilterCheckboxLabel'>Friend</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_17' class='advancedFilterCheckbox' data-filter='[(0x00040000,0x00000000)]' data-antiFilter='0xfffffff6de03f3af' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_17' class='customAdvancedFilterCheckboxLabel'>Virtual</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_18' class='advancedFilterCheckbox' data-filter='[(0x00100000,0x00000000)]' data-antiFilter='0xfffffff00c61e384' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_18' class='customAdvancedFilterCheckboxLabel'>Public</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_19' class='advancedFilterCheckbox' data-filter='[(0x00200000,0x00000000)]' data-antiFilter='0xfffffff00c51e384' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_19' class='customAdvancedFilterCheckboxLabel'>Protected</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_20' class='advancedFilterCheckbox' data-filter='[(0x00400000,0x00000000)]' data-antiFilter='0xfffffff00c31e384' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_20' class='customAdvancedFilterCheckboxLabel'>Private</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_21' class='advancedFilterCheckbox' data-filter='[(0x00800000,0x00000000)]' data-antiFilter='0xfffffff7dc03e78f' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_21' class='customAdvancedFilterCheckboxLabel'>Const</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_22' class='advancedFilterCheckbox' data-filter='[(0x01000000,0x00000000)]' data-antiFilter='0xfffffffc7c01ffcf' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_22' class='customAdvancedFilterCheckboxLabel'>Constexpr</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_23' class='advancedFilterCheckbox' data-filter='[(0x02000000,0x00000000)]' data-antiFilter='0xfffffff87c0dffee' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_23' class='customAdvancedFilterCheckboxLabel'>Template</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_24' class='advancedFilterCheckbox' data-filter='[(0x04000000,0x00000000)]' data-antiFilter='0xfffffffbfbfffffe' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_24' class='customAdvancedFilterCheckboxLabel'>UCLASS</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_25' class='advancedFilterCheckbox' data-filter='[(0x08000000,0x00000000)]' data-antiFilter='0xfffffffbf7fffffd' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_25' class='customAdvancedFilterCheckboxLabel'>USTRUCT</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_26' class='advancedFilterCheckbox' data-filter='[(0x10000000,0x00000000)]' data-antiFilter='0xffffffffef8ffff7' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_26' class='customAdvancedFilterCheckboxLabel'>UENUM</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_27' class='advancedFilterCheckbox' data-filter='[(0x20000000,0x00000000)]' data-antiFilter='0xfffffff7df01ffef' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_27' class='customAdvancedFilterCheckboxLabel'>UFUNCTION</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_28' class='advancedFilterCheckbox' data-filter='[(0x40000000,0x00000000)]' data-antiFilter='0xffffffffbf8fffdf' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_28' class='customAdvancedFilterCheckboxLabel'>UPROPERTY</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_29' class='advancedFilterCheckbox' data-filter='[(0x0000000800000000,0x00000000)]' data-antiFilter='0xfffffff3df03f7af' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_29' class='customAdvancedFilterCheckboxLabel'>Pure</label><br></li>
+											<li><input type='checkbox' id='advancedFilter_30' class='advancedFilterCheckbox' data-filter='[(0x00040010,0x00000000)(0x00020010,0x00000000)]' data-antiFilter='0xfffffffedc01ffef' onclick='onAdvancedFilterCheckboxClicked.call(this)'><label for='advancedFilter_30' class='customAdvancedFilterCheckboxLabel'>Virtual functions or static functions</label><br></li>
+										</ul>
+										<button class='clearCustomFiltersButton' onclick='onClearAdvancedFiltersButtonClicked()'>Clear</button>
+										<button class='applyCustomFiltersButton' onclick='onApplyAdvancedFilterButtonClicked()'>Apply</button>
+									</div>
+									<div class="result-content">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script>
+	setupSearchBox(document.getElementsByName("bodySearch")[0], "");
+	setupPerformSearchButton(document.getElementById('performSearchButton'), document.getElementsByName("bodySearch")[0], "");
+</script>
+

@@ -1,0 +1,570 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+	<script src="../../../../Common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../Style.css">
+		<title>UStrategyAIAction_AttackTarget | Strategy Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch">
+							<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+							<input type="text" name="keyword" class="searchbox" autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="contentContainer" class style="margin-left: 0px;">
+				<div id="pagedefault">
+					<div id="pagecontainer" style="padding-right: 0px; min-height: 49px;">
+						<div class="hero">
+							<div class="info">
+								<div id="pageTitle">
+									<h1 id="H1TitleId">UStrategyAIAction_AttackTarget</h1>
+								</div>
+									<h2>Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.</h2>
+								</div>
+							</div>
+							<div id="maincol" style="width: calc(100% - 60px); padding-bottom: 100px; height: auto;">
+								<div class="heading expanded">
+									<p>Inheritance Hierarchy</p>
+								</div>
+								<div id="hierarchy">
+									<div class="hierarchy">
+										<table class="hierarchy-table" cellspacing="0" id="hrch">
+											<tbody>
+												<tr>
+													<td class="hierarchy-button-cell">
+														<p>
+															<img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+														</p>
+													</td>
+													<td class='hierarchy-label-cell'>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>References</p>
+							</div>
+							<div id="references">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Module</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														StrategyGame
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Header</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														/StrategyGame/Source/StrategyGame/Public/AI/StrategyAIAction_AttackTarget.h
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Include</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														#include "AI/StrategyAIAction_AttackTarget.h"
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Syntax</p>
+							</div>
+							<div id="syntax">
+								<div class="simplecode_api">
+									<p>
+										class UStrategyAIAction_AttackTarget : 
+public 
+UStrategyAIAction<br>
+									</p>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Remarks</p>
+							</div>
+							<div id="description" style>
+								<p>
+									Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+								</p>
+							</div>
+							<div class="syntax">
+							<div class="heading expanded">
+								<p>Variables</p>
+							</div>
+								<div id="variables">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+													<th class="icon-cell" style="width:8%">
+													</th>
+													<th class="type-cell" style="width:10%">
+													</th>
+													<th class="name-cell" style="width:15%">
+														Name
+													</th>
+													<th class="desc-cell">
+														Description
+													</th>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>uint32</span> 
+ : 1
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="bIsPlayingAnimation/index.html">
+															<p>bIsPlayingAnimation</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															if pawn is playing attack animation
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>uint32</span> 
+ : 1
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="bMovingToTarget/index.html">
+															<p>bMovingToTarget</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															set to true when we are moving to our target
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>float</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="MeleeAttackAnimationEndTime/index.html">
+															<p>MeleeAttackAnimationEndTime</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															time when we will finish playing melee animation
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>TWeakObjectPtr</span> &lt; AActor &gt; 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="TargetActor/index.html">
+															<p>TargetActor</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															target actor to attack
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>FVector</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="TargetDestination/index.html">
+															<p>TargetDestination</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															destination to move closer
+														</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="heading expanded">
+									<p>Functions</p>
+								</div>
+								<div id="functions_0">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+												<th class="icon-cell" style="width:10%">
+												</th>
+												<th class="name-cell" style="width:8%;">
+												</th>
+												<th class="name-cell" style="width:15%;">
+													Name
+												</th>
+												<th class="desc-cell">
+													Description
+												</th>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+															<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class="type-span">
+															<p>
+																bool															</p>
+														</span>
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassFunctionListLink" href="Tick/index.html">
+															<nobr>
+																<p>Tick</p>
+															</nobr>
+														</a>
+														<div class="name-cell-arguments">
+															<p>
+																(
+																	<br>
+																		&nbsp;&nbsp;&nbsp;&nbsp;
+float DeltaTime																	<br>)<br>
+																</p>
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																Update in time current action
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		void																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink" href="Activate/index.html">
+																	<nobr>
+																		<p>Activate()</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																activate action
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		void																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink" href="Abort/index.html">
+																	<nobr>
+																		<p>Abort()</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																abort action to start something else
+															</p>
+														</td>
+													</tr>
+													<tr class="normal-row">
+														<td class="icon-cell">
+															<p>
+																<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																		<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																	</p>
+																</td>
+																<td class="name-cell" align="right">
+																	<span class="type-span">
+																		<p>
+																			bool																		</p>
+																	</span>
+																</td>
+																<td class="name-cell">
+																	<a class="docTool_ClassFunctionListLink" href="IsSafeToAbort/index.html">
+																		<nobr>
+																			<p>IsSafeToAbort()</p>
+																		</nobr>
+																	</a>
+																	<div class="name-cell-arguments">
+																</div>
+															</td>
+															<td class="desc-cell">
+																<p>
+																	can we abort this action?
+																</p>
+															</td>
+														</tr>
+														<tr class="normal-row">
+															<td class="icon-cell">
+																<p>
+																	<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																		<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																			<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																		</p>
+																	</td>
+																	<td class="name-cell" align="right">
+																		<span class="type-span">
+																			<p>
+																				bool																			</p>
+																		</span>
+																	</td>
+																	<td class="name-cell">
+																		<a class="docTool_ClassFunctionListLink" href="ShouldActivate/index.html">
+																			<nobr>
+																				<p>ShouldActivate()</p>
+																			</nobr>
+																		</a>
+																		<div class="name-cell-arguments">
+																	</div>
+																</td>
+																<td class="desc-cell">
+																	<p>
+																		Should we activate action this time ?
+																	</p>
+																</td>
+															</tr>
+															<tr class="normal-row">
+																<td class="icon-cell">
+																	<p>
+																		<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																	</p>
+																</td>
+																<td class="name-cell" align="right">
+																	<span class="type-span">
+																		<p>
+																			void																		</p>
+																	</span>
+																</td>
+																<td class="name-cell">
+																	<a class="docTool_ClassFunctionListLink" href="NotifyBump/index.html">
+																		<nobr>
+																			<p>NotifyBump</p>
+																		</nobr>
+																	</a>
+																	<div class="name-cell-arguments">
+																		<p>
+																			(
+																				<br>
+																					&nbsp;&nbsp;&nbsp;&nbsp;
+const FHitResult & Hit																				<br>)<br>
+																			</p>
+																		</div>
+																	</td>
+																	<td class="desc-cell">
+																		<p>
+																			Pawn has hit something
+																		</p>
+																	</td>
+																</tr>
+																<tr class="normal-row">
+																	<td class="icon-cell">
+																		<p>
+																			<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																		</p>
+																	</td>
+																	<td class="name-cell" align="right">
+																		<span class="type-span">
+																			<p>
+																				void																			</p>
+																		</span>
+																	</td>
+																	<td class="name-cell">
+																		<a class="docTool_ClassFunctionListLink" href="OnMoveCompleted/index.html">
+																			<nobr>
+																				<p>OnMoveCompleted()</p>
+																			</nobr>
+																		</a>
+																		<div class="name-cell-arguments">
+																	</div>
+																</td>
+																<td class="desc-cell">
+																	<p>
+																		notify about completing current move
+																	</p>
+																</td>
+															</tr>
+															<tr class="normal-row">
+																<td class="icon-cell">
+																	<p>
+																		<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																	</p>
+																</td>
+																<td class="name-cell" align="right">
+																	<span class="type-span">
+																		<p>
+																			void																		</p>
+																	</span>
+																</td>
+																<td class="name-cell">
+																	<a class="docTool_ClassFunctionListLink" href="MoveCloser/index.html">
+																		<nobr>
+																			<p>MoveCloser()</p>
+																		</nobr>
+																	</a>
+																	<div class="name-cell-arguments">
+																</div>
+															</td>
+															<td class="desc-cell">
+																<p>
+																	move closer to target
+																</p>
+															</td>
+														</tr>
+														<tr class="normal-row">
+															<td class="icon-cell">
+																<p>
+																	<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																</p>
+															</td>
+															<td class="name-cell" align="right">
+																<span class="type-span">
+																	<p>
+																		void																	</p>
+																</span>
+															</td>
+															<td class="name-cell">
+																<a class="docTool_ClassFunctionListLink" href="UpdateTargetInformation/index.html">
+																	<nobr>
+																		<p>UpdateTargetInformation()</p>
+																	</nobr>
+																</a>
+																<div class="name-cell-arguments">
+															</div>
+														</td>
+														<td class="desc-cell">
+															<p>
+																updates any information about target, his location, target changes in ai controller, etc.
+															</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</body>
+					</html>
+
+					<script type="text/javascript" charset="UTF-8" src="../../../../SearchData.js"></script>
+					<script>
+						setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../../");
+					</script>
+
+					<script>
+						let elements = document.getElementsByClassName('heading expanded');
+						for (let elem of elements)
+						{
+							let elemToExpandOrCollapse = elem.nextElementSibling;
+							elem.addEventListener('click', function()
+							{
+								onExpandableHeadingClicked(elem, elemToExpandOrCollapse);
+							});
+						}
+					</script>

@@ -1,0 +1,785 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+	<script src="../../../Common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../Style.css">
+		<title>AStrategyProjectile | Strategy Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch">
+							<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+							<input type="text" name="keyword" class="searchbox" autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="contentContainer" class style="margin-left: 0px;">
+				<div id="pagedefault">
+					<div id="pagecontainer" style="padding-right: 0px; min-height: 49px;">
+						<div class="hero">
+							<div class="info">
+								<div id="pageTitle">
+									<h1 id="H1TitleId">AStrategyProjectile</h1>
+								</div>
+									<h2>Base class for the projectiles in the game</h2>
+								</div>
+							</div>
+							<div id="maincol" style="width: calc(100% - 60px); padding-bottom: 100px; height: auto;">
+								<div class="heading expanded">
+									<p>Inheritance Hierarchy</p>
+								</div>
+								<div id="hierarchy">
+									<div class="hierarchy">
+										<table class="hierarchy-table" cellspacing="0" id="hrch">
+											<tbody>
+												<tr>
+													<td class="hierarchy-button-cell">
+														<p>
+															<img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+														</p>
+													</td>
+													<td class='hierarchy-label-cell'>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>References</p>
+							</div>
+							<div id="references">
+								<div class="member-list">
+									<table cellspacing="0">
+										<tbody>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Module</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														StrategyGame
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Header</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														/StrategyGame/Source/StrategyGame/Public/StrategyProjectile.h
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="name-cell">
+													<p>Include</p>
+												</td>
+												<td class="desc-cell">
+													<p>
+														#include "StrategyProjectile.h"
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Syntax</p>
+							</div>
+							<div id="syntax">
+								<div class="simplecode_api">
+									<p>
+										class AStrategyProjectile : 
+public 
+AActorpublic 
+IStrategyTeamInterface<br>
+									</p>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Remarks</p>
+							</div>
+							<div id="description" style>
+								<p>
+									Base class for the projectiles in the game
+								</p>
+							</div>
+							<div class="syntax">
+							<div class="heading expanded">
+								<p>Variables</p>
+							</div>
+								<div id="variables">
+									<div class="member-list">
+										<table cellspacing="0">
+											<tbody>
+												<tr class="header-row">
+													<th class="icon-cell" style="width:8%">
+													</th>
+													<th class="type-cell" style="width:10%">
+													</th>
+													<th class="name-cell" style="width:15%">
+														Name
+													</th>
+													<th class="desc-cell">
+														Description
+													</th>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>bool</span> 
+															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="bInitialized/index.html">
+															<p>bInitialized</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															true, if projectile was initialized
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Public variable" title="Public variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_public.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class= "type-span">
+															<p>
+																<span>AStrategyBuilding</span> 
+*															</p>
+														</span>
+														&nbsp;
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassVariableListLink" href="Building/index.html">
+															<p>Building</p>
+														</a>
+													</td>
+													<td class="desc-cell">
+														<p>
+															
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class= "type-span">
+														<p>
+															<span>USphereComponent</span> 
+*														</p>
+													</span>
+													&nbsp;
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassVariableListLink" href="CollisionComp/index.html">
+														<p>CollisionComp</p>
+													</a>
+												</td>
+												<td class="desc-cell">
+													<p>
+														collisions
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Public variable" title="Public variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_public.png">
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class= "type-span">
+														<p>
+															<span>bool</span> 
+														</p>
+													</span>
+													&nbsp;
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassVariableListLink" href="ConstantDamage/index.html">
+														<p>ConstantDamage</p>
+													</a>
+												</td>
+												<td class="desc-cell">
+													<p>
+														if set, damage will be constant through lifespan
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Public variable" title="Public variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_public.png">
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class= "type-span">
+														<p>
+															<span>TSubclassOf</span> &lt; UDamageType &gt; 
+														</p>
+													</span>
+													&nbsp;
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassVariableListLink" href="DamageType/index.html">
+														<p>DamageType</p>
+													</a>
+												</td>
+												<td class="desc-cell">
+													<p>
+														type of damage
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class= "type-span">
+														<p>
+															<span>TArray</span> &lt; AActor * &gt; 
+														</p>
+													</span>
+													&nbsp;
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassVariableListLink" href="HitActors/index.html">
+														<p>HitActors</p>
+													</a>
+												</td>
+												<td class="desc-cell">
+													<p>
+														list of just hit actors
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+												</p>
+											</td>
+											<td class="name-cell" align="right">
+												<span class= "type-span">
+													<p>
+														<span>UProjectileMovementComponent</span> 
+*													</p>
+												</span>
+												&nbsp;
+											</td>
+											<td class="name-cell">
+												<a class="docTool_ClassVariableListLink" href="MovementComp/index.html">
+													<p>MovementComp</p>
+												</a>
+											</td>
+											<td class="desc-cell">
+												<p>
+													movement component
+												</p>
+											</td>
+										</tr>
+										<tr class="normal-row">
+											<td class="icon-cell">
+												<p>
+													<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+												</p>
+											</td>
+											<td class="name-cell" align="right">
+												<span class= "type-span">
+													<p>
+														<span>uint8</span> 
+													</p>
+												</span>
+												&nbsp;
+											</td>
+											<td class="name-cell">
+												<a class="docTool_ClassVariableListLink" href="MyTeamNum/index.html">
+													<p>MyTeamNum</p>
+												</a>
+											</td>
+											<td class="desc-cell">
+												<p>
+													current team number
+												</p>
+											</td>
+										</tr>
+										<tr class="normal-row">
+											<td class="icon-cell">
+												<p>
+													<img alt="Protected variable" title="Protected variable" width="18" src="https://docs.unrealengine.com/Images/api_variable_protected.png">
+												</p>
+											</td>
+											<td class="name-cell" align="right">
+												<span class= "type-span">
+													<p>
+														<span>int32</span> 
+													</p>
+												</span>
+												&nbsp;
+											</td>
+											<td class="name-cell">
+												<a class="docTool_ClassVariableListLink" href="RemainingDamage/index.html">
+													<p>RemainingDamage</p>
+												</a>
+											</td>
+											<td class="desc-cell">
+												<p>
+													remaining damage value
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="heading expanded">
+							<p>Functions</p>
+						</div>
+						<div id="functions_0">
+							<div class="member-list">
+								<table cellspacing="0">
+									<tbody>
+										<tr class="header-row">
+										<th class="icon-cell" style="width:10%">
+										</th>
+										<th class="name-cell" style="width:8%;">
+										</th>
+										<th class="name-cell" style="width:15%;">
+											Name
+										</th>
+										<th class="desc-cell">
+											Description
+										</th>
+									</tr>
+									<tr class="normal-row">
+										<td class="icon-cell">
+											<p>
+												<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+											</p>
+										</td>
+										<td class="name-cell" align="right">
+											<span class="type-span">
+												<p>
+													void												</p>
+											</span>
+										</td>
+										<td class="name-cell">
+											<a class="docTool_ClassFunctionListLink" href="OnProjectileHit/index.html">
+												<nobr>
+													<p>OnProjectileHit</p>
+												</nobr>
+											</a>
+											<div class="name-cell-arguments">
+												<p>
+													(
+														<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;
+AActor * HitActor,<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;
+const FVector & HitLocation,<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;
+const FVector & HitNormal																<br>)<br>
+															</p>
+														</div>
+													</td>
+													<td class="desc-cell">
+														<p>
+															blueprint event: projectile hit something
+														</p>
+													</td>
+												</tr>
+												<tr class="normal-row">
+													<td class="icon-cell">
+														<p>
+															<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+														</p>
+													</td>
+													<td class="name-cell" align="right">
+														<span class="type-span">
+															<p>
+																void															</p>
+														</span>
+													</td>
+													<td class="name-cell">
+														<a class="docTool_ClassFunctionListLink" href="OnProjectileDestroyed/index.html">
+															<nobr>
+																<p>OnProjectileDestroyed()</p>
+															</nobr>
+														</a>
+														<div class="name-cell-arguments">
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														blueprint event: projectile hit something
+													</p>
+												</td>
+											</tr>
+											<tr class="normal-row">
+												<td class="icon-cell">
+													<p>
+														<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+													</p>
+												</td>
+												<td class="name-cell" align="right">
+													<span class="type-span">
+														<p>
+															void														</p>
+													</span>
+												</td>
+												<td class="name-cell">
+													<a class="docTool_ClassFunctionListLink" href="InitProjectile/index.html">
+														<nobr>
+															<p>InitProjectile</p>
+														</nobr>
+													</a>
+													<div class="name-cell-arguments">
+														<p>
+															(
+																<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;
+const FVector & ShootDirection,<br>
+																		&nbsp;&nbsp;&nbsp;&nbsp;
+uint8 InTeamNum,<br>
+																			&nbsp;&nbsp;&nbsp;&nbsp;
+int32 ImpactDamage,<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;
+float InLifeSpan																			<br>)<br>
+																		</p>
+																	</div>
+																</td>
+																<td class="desc-cell">
+																	<p>
+																		initial setup
+																	</p>
+																</td>
+															</tr>
+															<tr class="normal-row">
+																<td class="icon-cell">
+																	<p>
+																		<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																	</p>
+																</td>
+																<td class="name-cell" align="right">
+																	<span class="type-span">
+																		<p>
+																			void																		</p>
+																	</span>
+																</td>
+																<td class="name-cell">
+																	<a class="docTool_ClassFunctionListLink" href="OnHit/index.html">
+																		<nobr>
+																			<p>OnHit</p>
+																		</nobr>
+																	</a>
+																	<div class="name-cell-arguments">
+																		<p>
+																			(
+																				<br>
+																					&nbsp;&nbsp;&nbsp;&nbsp;
+const FHitResult & HitResult																				<br>)<br>
+																			</p>
+																		</div>
+																	</td>
+																	<td class="desc-cell">
+																		<p>
+																			handle hit
+																		</p>
+																	</td>
+																</tr>
+																<tr class="normal-row">
+																	<td class="icon-cell">
+																		<p>
+																			<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																				<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																			</p>
+																		</td>
+																		<td class="name-cell" align="right">
+																			<span class="type-span">
+																				<p>
+																					void																				</p>
+																			</span>
+																		</td>
+																		<td class="name-cell">
+																			<a class="docTool_ClassFunctionListLink" href="LifeSpanExpired/index.html">
+																				<nobr>
+																					<p>LifeSpanExpired()</p>
+																				</nobr>
+																			</a>
+																			<div class="name-cell-arguments">
+																		</div>
+																	</td>
+																	<td class="desc-cell">
+																		<p>
+																			Begin Actor interface
+																		</p>
+																	</td>
+																</tr>
+																<tr class="normal-row">
+																	<td class="icon-cell">
+																		<p>
+																			<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																				<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																			</p>
+																		</td>
+																		<td class="name-cell" align="right">
+																			<span class="type-span">
+																				<p>
+																					void																				</p>
+																			</span>
+																		</td>
+																		<td class="name-cell">
+																			<a class="docTool_ClassFunctionListLink" href="NotifyActorBeginOverlap/index.html">
+																				<nobr>
+																					<p>NotifyActorBeginOverlap</p>
+																				</nobr>
+																			</a>
+																			<div class="name-cell-arguments">
+																				<p>
+																					(
+																						<br>
+																							&nbsp;&nbsp;&nbsp;&nbsp;
+AActor * OtherActor																						<br>)<br>
+																					</p>
+																				</div>
+																			</td>
+																			<td class="desc-cell">
+																				<p>
+																					handle touch to detect enemy pawns
+																				</p>
+																			</td>
+																		</tr>
+																		<tr class="normal-row">
+																			<td class="icon-cell">
+																				<p>
+																					<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																						<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																					</p>
+																				</td>
+																				<td class="name-cell" align="right">
+																					<span class="type-span">
+																						<p>
+																							void																						</p>
+																					</span>
+																				</td>
+																				<td class="name-cell">
+																					<a class="docTool_ClassFunctionListLink" href="FellOutOfWorld/index.html">
+																						<nobr>
+																							<p>FellOutOfWorld</p>
+																						</nobr>
+																					</a>
+																					<div class="name-cell-arguments">
+																						<p>
+																							(
+																								<br>
+																									&nbsp;&nbsp;&nbsp;&nbsp;
+const UDamageType & dmgType																								<br>)<br>
+																							</p>
+																						</div>
+																					</td>
+																					<td class="desc-cell">
+																						<p>
+																							Handle falling out of the world
+																						</p>
+																					</td>
+																				</tr>
+																				<tr class="normal-row">
+																					<td class="icon-cell">
+																						<p>
+																							<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																								<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																							</p>
+																						</td>
+																						<td class="name-cell" align="right">
+																							<span class="type-span">
+																								<p>
+																									void																								</p>
+																							</span>
+																						</td>
+																						<td class="name-cell">
+																							<a class="docTool_ClassFunctionListLink" href="PostLoad/index.html">
+																								<nobr>
+																									<p>PostLoad()</p>
+																								</nobr>
+																							</a>
+																							<div class="name-cell-arguments">
+																						</div>
+																					</td>
+																					<td class="desc-cell">
+																						<p>
+																							
+																						</p>
+																					</td>
+																				</tr>
+																				<tr class="normal-row">
+																					<td class="icon-cell">
+																						<p>
+																							<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																								<img alt="Virtual" title="Virtual" width="18" src="https://docs.unrealengine.com/Images/api_function_virtual.png">
+																									<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																								</p>
+																							</td>
+																							<td class="name-cell" align="right">
+																								<span class="type-span">
+																									<p>
+																										uint8																									</p>
+																								</span>
+																							</td>
+																							<td class="name-cell">
+																								<a class="docTool_ClassFunctionListLink" href="GetTeamNum/index.html">
+																									<nobr>
+																										<p>GetTeamNum()</p>
+																									</nobr>
+																								</a>
+																								<div class="name-cell-arguments">
+																							</div>
+																						</td>
+																						<td class="desc-cell">
+																							<p>
+																								[IStrategyTeamInterface] get team number
+																							</p>
+																						</td>
+																					</tr>
+																					<tr class="normal-row">
+																						<td class="icon-cell">
+																							<p>
+																								<img alt="Protected function" title="Protected function" width="18" src="https://docs.unrealengine.com/Images/api_function_protected.png">
+																							</p>
+																						</td>
+																						<td class="name-cell" align="right">
+																							<span class="type-span">
+																								<p>
+																									void																								</p>
+																							</span>
+																						</td>
+																						<td class="name-cell">
+																							<a class="docTool_ClassFunctionListLink" href="DealDamage/index.html">
+																								<nobr>
+																									<p>DealDamage</p>
+																								</nobr>
+																							</a>
+																							<div class="name-cell-arguments">
+																								<p>
+																									(
+																										<br>
+																											&nbsp;&nbsp;&nbsp;&nbsp;
+const FHitResult & HitResult																										<br>)<br>
+																									</p>
+																								</div>
+																							</td>
+																							<td class="desc-cell">
+																								<p>
+																									deal damage
+																								</p>
+																							</td>
+																						</tr>
+																						<tr class="normal-row">
+																							<td class="icon-cell">
+																								<p>
+																									<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																										<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																									</p>
+																								</td>
+																								<td class="name-cell" align="right">
+																									<span class="type-span">
+																										<p>
+																											UProjectileMovementComponent 
+*																										</p>
+																									</span>
+																								</td>
+																								<td class="name-cell">
+																									<a class="docTool_ClassFunctionListLink" href="GetMovementComp/index.html">
+																										<nobr>
+																											<p>GetMovementComp()</p>
+																										</nobr>
+																									</a>
+																									<div class="name-cell-arguments">
+																								</div>
+																							</td>
+																							<td class="desc-cell">
+																								<p>
+																									Returns MovementComp subobject *
+																								</p>
+																							</td>
+																						</tr>
+																						<tr class="normal-row">
+																							<td class="icon-cell">
+																								<p>
+																									<img alt="Public function" title="Public function" width="18" src="https://docs.unrealengine.com/Images/api_function_public.png">
+																										<img alt="Const" title="Const" width="18" src="https://docs.unrealengine.com/Images/api_function_const.png">
+																									</p>
+																								</td>
+																								<td class="name-cell" align="right">
+																									<span class="type-span">
+																										<p>
+																											USphereComponent 
+*																										</p>
+																									</span>
+																								</td>
+																								<td class="name-cell">
+																									<a class="docTool_ClassFunctionListLink" href="GetCollisionComp/index.html">
+																										<nobr>
+																											<p>GetCollisionComp()</p>
+																										</nobr>
+																									</a>
+																									<div class="name-cell-arguments">
+																								</div>
+																							</td>
+																							<td class="desc-cell">
+																								<p>
+																									Returns CollisionComp subobject *
+																								</p>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</body>
+														</html>
+
+														<script type="text/javascript" charset="UTF-8" src="../../../SearchData.js"></script>
+														<script>
+															setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../");
+														</script>
+
+														<script>
+															let elements = document.getElementsByClassName('heading expanded');
+															for (let elem of elements)
+															{
+																let elemToExpandOrCollapse = elem.nextElementSibling;
+																elem.addEventListener('click', function()
+																{
+																	onExpandableHeadingClicked(elem, elemToExpandOrCollapse);
+																});
+															}
+														</script>

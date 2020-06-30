@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://docs.unrealengine.com/Include/CSS/udn_public.css">
+	<script src="../../../Common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../Style.css">
+		<title>Give Buff | Strategy Game Documentation</title>
+	</head>
+
+	<body>
+		<div id="webThree">
+			<div id="page_head" style>
+				<div id="head">
+				</div>
+				<div id="pagenav">
+					<div id="search_container">
+						<form name="bodySearch" method="get">
+							<input type="image" src="https://docs.unrealengine.com/Include/Images/search_box_icon.png" class="searchbutton">
+							<input type="hidden" name="filter" value="Documentation">
+							<input type="text" name="keyword" class="searchbox" autocomplete="off">
+						</form>
+					</div>
+				</div>
+				<div id="contentContainer" class style="margin-left: 0px;">
+					<div id="pagedefault">
+						<div id="pagecontainer" style="padding-right: 0px; min-height: 5px;">
+							<div class="hero">
+								<div class="imgContainer"><img src=""></div>
+									<div class="info">
+										<div id="pageTitle">
+											<h1 id="H1TitleId">Give Buff</h1>
+										</div>
+										<h2>
+											Give Buff
+										</h2>
+										<div id="access">
+											<div class="accessContainer">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="maincol" style="width: calc(100%-60px); padding-bottom: 100px;">
+									<p>
+										Adds buff for specified strategy character. 
+									</p>
+									<p>
+										Target is Strategy Game Blueprint Library
+									</p>
+									<div class="graph">
+										<div class="node_container function">
+											<div class="node">
+												<div class="titlebar_node">
+													<div class="titlebar_overlay">
+														<div class="titlebar_node_text">
+															Give Buff
+														</div>
+													</div>
+												</div>
+												<div class="nodebody">
+													<div class="background"></div>
+													<div class="inputs">
+														<div id="pin_In" class="pin_container">
+															<div class="pin exec">
+																<div class="pin_connector_container">
+																	<div class="pin_connector"></div>
+																</div>
+																<div class="pinbody">
+																	<div class="titlebar_pin">
+																	</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_In_Char" class="pin_container">
+														<div class="pin object">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">In Char</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Attack_Min" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Attack Min</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Attack_Max" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Attack Max</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Damage_Reduction" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Damage Reduction</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Max_Health_Bonus" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Max Health Bonus</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Health_Regen" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Health Regen</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Speed" class="pin_container">
+														<div class="pin float">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Speed</div>
+																<div class="pinvalue">
+																	<div class="value_text floatleft">
+																		0.0
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Duration" class="pin_container">
+														<div class="pin float">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Duration</div>
+																<div class="pinvalue">
+																	<div class="value_text floatleft">
+																		0.0
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_b_Infinite_Duration" class="pin_container">
+														<div class="pin boolean">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">b Infinite Duration</div>
+																<div class="pinvalue">
+																	<div class="value_boolean false floatleft"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="pin_Attack_Distance" class="pin_container">
+														<div class="pin enum">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">Attack Distance</div>
+																<div class="pinvalue">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="outputs">
+													<div id="pin_Out" class="pin_container">
+														<div class="pin exec">
+															<div class="pin_connector_container">
+																<div class="pin_connector"></div>
+															</div>
+															<div class="pinbody">
+																<div class="titlebar_pin">
+																</div>
+																	<div class="pinvalue">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="heading expanded">
+										<p>Inputs</p>
+									</div>
+									<div id="inputs">
+										<div class="member-list">
+											<table cellspacing="0">
+												<colgroup><col width="15%">
+													<col width="20%">
+													<col width="65%">
+												</colgroup>
+												<tbody>
+												<tr id="In" class="normal-row">
+													<td class="icon-cell">
+														<div class="input_exec">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>In</a>
+													<div class="name-cell-arguments">
+														Exec
+													</div>
+												</td>
+												<td class="desc-cell">
+												</td>
+											</tr>
+											<tr id="In_Char" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable object">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>In Char</a>
+													<div class="name-cell-arguments">
+														Strategy Char Object Reference
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														The strategy character to apply the buff values 
+													</p>
+												</td>
+											</tr>
+											<tr id="Attack_Min" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Attack Min</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Set the characters Minimal melee attack damage. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Attack_Max" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Attack Max</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Sets the characters Maximum melee attack damage. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Damage_Reduction" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Damage Reduction</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Amount to reduce the characters damage by. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Max_Health_Bonus" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Max Health Bonus</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Amount to increase the characters health by. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Health_Regen" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Health Regen</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Amount to regenerate the characters by. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Speed" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable float">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Speed</a>
+													<div class="name-cell-arguments">
+														Float
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Amount to adjust the characters Movement speed by. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Duration" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable float">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Duration</a>
+													<div class="name-cell-arguments">
+														Float
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Duration for the values to apply. 
+													</p>
+												</td>
+											</tr>
+											<tr id="b_Infinite_Duration" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable boolean">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>b Infinite Duration</a>
+													<div class="name-cell-arguments">
+														Boolean
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Should this buff apply forever. 
+													</p>
+												</td>
+											</tr>
+											<tr id="Attack_Distance" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_variable enum">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Attack Distance</a>
+													<div class="name-cell-arguments">
+														int32 Enum
+													</div>
+												</td>
+												<td class="desc-cell">
+													<p>
+														Amount to increase the attack distance by. 
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="heading expanded">
+								<p>Outputs</p>
+							</div>
+							<div id="outputs">
+								<div class="member-list">
+									<table cellspacing="0">
+										<colgroup><col width="15%">
+											<col width="20%">
+											<col width="65%">
+										</colgroup>
+										<tbody>
+											<tr id="Out" class="normal-row">
+												<td class="icon-cell">
+													<div class="input_exec">
+													</div>
+												</td>
+												<td class="name-cell">
+													<a>Out</a>
+													<div class="name-cell-arguments">
+														Exec
+													</div>
+												</td>
+												<td class="desc-cell">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+
+	</html>
+
+	<script type="text/javascript" charset="UTF-8" src="../../../SearchData.js"></script>
+	<script>
+		setupSearchBox(document.getElementsByName("bodySearch")[0], "../../../");
+	</script>
+
+	<script>
+		let elements = document.getElementsByClassName('heading expanded');
+		for (let elem of elements)
+		{
+			let elemToExpandOrCollapse = elem.nextElementSibling;
+			elem.addEventListener('click', function()
+			{
+				onExpandableHeadingClicked(elem, elemToExpandOrCollapse);
+			});
+		}
+	</script>
