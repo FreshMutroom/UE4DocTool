@@ -2,7 +2,7 @@
 A UE4 plugin that creates documentation pages for UE4 projects, plugins and engines.
 
 Examples of what it can do: https://freshmutroom.github.io/UE4DocTool/
-\
+\  <!-- Trying to put a newline here to add some space between the stuff that comes next -->
 \
 Download GUI application of it here, capable of documenting UE4 projects: 
 https://drive.google.com/file/d/199DYAOpCZ5nXx-vE7mViBrL9786oCODk/view?usp=sharing
