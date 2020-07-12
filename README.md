@@ -12,3 +12,10 @@ To use this application requires the following:
 - Visual Studio 2019 (2017 might work)
 - Only works with UE4.23, UE4.24 and UE4.25 projects. In addition the engine version corrisponding to the engine association of your project must be installed (e.g. to document a 4.24 project will require UE4.24 to be installed)
 - Pages it creates have been tested in Google Chrome. Other browsers might display correctly but unlikely
+
+todo list:
+- add ability to document plugins to the GUI application
+- add ability for users to use their own designs
+- Mac
+- support more engine versions
+- remove dependency on the UE4 docs style sheet
