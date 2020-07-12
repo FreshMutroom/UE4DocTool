@@ -19,3 +19,4 @@ todo list:
 - Mac
 - support more engine versions
 - remove dependency on the UE4 docs style sheet
+- make empty searches show everything (right now they show nothing)
