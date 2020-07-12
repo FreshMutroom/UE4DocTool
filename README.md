@@ -15,6 +15,7 @@ To use this application requires the following:
 
 todo list:
 - add ability to document plugins to the GUI application
+- try find way to find all projects on computer for GUI application
 - add ability for users to use their own designs
 - Mac
 - support more engine versions
