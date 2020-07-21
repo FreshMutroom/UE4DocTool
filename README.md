@@ -14,9 +14,9 @@ To use this application requires the following:
 - Pages it creates have been tested in Google Chrome. Other browsers might display correctly but unlikely
 
 todo list:
-- add ability to document plugins to the GUI application
 - try find way to find all projects on computer for GUI application
 - add ability for users to use their own designs
+- support windows 7/8/8.1
 - Mac
 - support more engine versions
 - remove dependency on the UE4 docs style sheet
