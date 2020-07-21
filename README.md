@@ -21,3 +21,5 @@ todo list:
 - support more engine versions
 - remove dependency on the UE4 docs style sheet
 - make empty searches show everything (right now they show nothing)
+- remove reliance on cl.exe expanding macros and instead do it myself
+- cached file
