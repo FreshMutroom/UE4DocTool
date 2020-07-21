@@ -13,7 +13,7 @@ To use this application requires the following:
 - Only works with UE4.23, UE4.24 and UE4.25 projects/plugins. In addition the engine version corrisponding to the engine association of your project must be installed (e.g. to document a 4.24 project will require UE4.24 to be installed)
 - Pages it creates have been tested in Google Chrome. Other browsers might display correctly but unlikely
 
-todo list:
+todo list (non-exhaustive):
 - try find way to find all projects on computer for GUI application
 - add ability for users to use their own designs
 - support windows 7/8/8.1
