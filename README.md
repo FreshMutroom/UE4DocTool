@@ -25,3 +25,4 @@ TODO list (non-exhaustive):
 - cached file
 - make the pages compatible with more browsers (very unlikely but they may be already, haven't tested)
 - implement the All constants · All functions · All enums · All classes · Class hierarchy pages in the API homepage
+- document level blueprints. ULevel::GetLevelScriptBlueprint might be useful
