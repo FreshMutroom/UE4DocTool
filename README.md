@@ -28,3 +28,4 @@ TODO list (non-exhaustive):
 - document level blueprints. ULevel::GetLevelScriptBlueprint might be useful
 - look into using backticks instead of quotes on pages (might mean less escaping stuff)
 - avoid cl.exe doing creating cmd box
+- add option to have pop up progress widget's hyperlink to either navigate to folder (like it currently does) or home page (like how doc tool application does it)
