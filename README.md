@@ -3,4 +3,4 @@ A UE4 plugin that creates documentation pages for UE4 projects, plugins and engi
 
 Only part of the source is here
 
-[Github pages link](freshmutroom.github.io/UE4DocTool)
+[Github pages link](https://FreshMutroom.Github.io/UE4DocTool/)
